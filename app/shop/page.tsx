@@ -1,5 +1,5 @@
 import ProductCard from '@/components/cards/ProductCard';
-import { Tabs, TabsContent, TabsList, TabsTab } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Badge } from '@/components/ui/badge';
 
 const products = {
@@ -132,12 +132,12 @@ export default function Shop() {
         </div>
 
         {/* Phase 2 Notice */}
-        <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-8">
+        <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 mb-8">
           <div className="flex items-center space-x-2">
-            <Badge variant="secondary" className="bg-amber-100 text-amber-800">Phase 2</Badge>
-            <span className="text-amber-800 font-medium">Product Education & Recipes Coming Soon</span>
+            <Badge variant="secondary" className="bg-primary/10 text-primary/80">Phase 2</Badge>
+            <span className="text-primary/80 font-medium">Product Education & Recipes Coming Soon</span>
           </div>
-          <p className="text-amber-700 text-sm mt-2">
+          <p className="text-primary/70 text-sm mt-2">
             We're working on detailed educational content about each durian variety and delicious recipes 
             to help you make the most of our products.
           </p>
@@ -147,12 +147,12 @@ export default function Shop() {
         <Tabs defaultValue="all" className="w-full">
           <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6 mb-8">
             {categories.map((category) => (
-              <TabsTab key={category.id} value={category.id} className="text-xs sm:text-sm">
+              <TabsTrigger key={category.id} value={category.id} className="text-xs sm:text-sm">
                 {category.name}
                 <Badge variant="secondary" className="ml-1 text-xs">
                   {category.count}
                 </Badge>
-              </TabsTab>
+              </TabsTrigger>
             ))}
           </TabsList>
 

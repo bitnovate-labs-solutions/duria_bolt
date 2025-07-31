@@ -92,7 +92,7 @@ export default function WhereToBuy() {
                   </div>
                   <a 
                     href={reseller.website}
-                    className="inline-flex items-center text-amber-600 hover:text-amber-700 font-medium"
+                    className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
                   >
                     Visit Website
                     <ExternalLink className="w-4 h-4 ml-1" />
@@ -139,7 +139,7 @@ export default function WhereToBuy() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             <Card className="text-center">
               <CardContent className="p-6">
-                <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🎉</span>
                 </div>
                 <h3 className="font-semibold text-lg mb-2">Custom Packages</h3>
@@ -151,7 +151,7 @@ export default function WhereToBuy() {
 
             <Card className="text-center">
               <CardContent className="p-6">
-                <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">👨‍🍳</span>
                 </div>
                 <h3 className="font-semibold text-lg mb-2">Expert Guidance</h3>
@@ -163,7 +163,7 @@ export default function WhereToBuy() {
 
             <Card className="text-center">
               <CardContent className="p-6">
-                <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🚚</span>
                 </div>
                 <h3 className="font-semibold text-lg mb-2">Full Service</h3>

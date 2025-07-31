@@ -1,7 +1,7 @@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTab } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Star, Shield, Truck, Heart, Package } from 'lucide-react';
 import Link from 'next/link';
 
@@ -97,6 +97,12 @@ const productData: { [key: string]: any } = {
   }
 };
 
+export async function generateStaticParams() {
+  return Object.keys(productData).map((slug) => ({
+    slug: slug,
+  }));
+}
+
 export default function ProductPage({ params }: { params: { slug: string } }) {
   const product = productData[params.slug];
 
@@ -119,9 +125,9 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         {/* Breadcrumb */}
         <nav className="mb-8">
           <div className="flex items-center space-x-2 text-sm text-gray-500">
-            <Link href="/" className="hover:text-amber-600">Home</Link>
+                          <Link href="/" className="hover:text-primary">Home</Link>
             <span>/</span>
-            <Link href="/shop" className="hover:text-amber-600">Shop</Link>
+                          <Link href="/shop" className="hover:text-primary">Shop</Link>
             <span>/</span>
             <span className="text-gray-900">{product.title}</span>
           </div>
@@ -157,14 +163,14 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               {product.title}
             </h1>
             <div className="flex items-center mb-4">
-              <div className="flex text-amber-400">
+                              <div className="flex text-primary">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-current" />
                 ))}
               </div>
               <span className="ml-2 text-gray-600">(4.9/5 based on 127 reviews)</span>
             </div>
-            <p className="text-2xl font-bold text-amber-600 mb-6">{product.price}</p>
+                            <p className="text-2xl font-bold text-primary mb-6">{product.price}</p>
             <p className="text-gray-600 mb-8 leading-relaxed">{product.description}</p>
 
             {/* Key Features */}
@@ -173,7 +179,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               <ul className="space-y-2">
                 {product.features.map((feature: string) => (
                   <li key={feature} className="flex items-center">
-                    <Heart className="w-4 h-4 text-amber-600 mr-2 flex-shrink-0" />
+                    <Heart className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
@@ -182,7 +188,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
             {/* CTA Buttons */}
             <div className="space-y-4">
-              <Button className="w-full bg-amber-600 hover:bg-amber-700" size="lg">
+                              <Button className="w-full bg-primary hover:bg-primary/90" size="lg">
                 Contact for Pricing & Availability
               </Button>
               <Button variant="outline" className="w-full" size="lg">
@@ -202,7 +208,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 Global Shipping
               </div>
               <div className="flex items-center text-sm text-gray-600">
-                <Star className="w-4 h-4 mr-1 text-amber-600" />
+                                  <Star className="w-4 h-4 mr-1 text-primary" />
                 Premium Quality
               </div>
             </div>
@@ -212,10 +218,10 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         {/* Detailed Information Tabs */}
         <Tabs defaultValue="nutrition" className="mb-12">
           <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4">
-            <TabsTab value="nutrition">Nutrition</TabsTab>
-            <TabsTab value="packaging">Packaging</TabsTab>
-            <TabsTab value="benefits">Benefits</TabsTab>
-            <TabsTab value="unique">Unique Traits</TabsTab>
+            <TabsTrigger value="nutrition">Nutrition</TabsTrigger>
+            <TabsTrigger value="packaging">Packaging</TabsTrigger>
+            <TabsTrigger value="benefits">Benefits</TabsTrigger>
+            <TabsTrigger value="unique">Unique Traits</TabsTrigger>
           </TabsList>
 
           <TabsContent value="nutrition" className="mt-8">
@@ -228,7 +234,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                       <div className="font-semibold text-gray-900 capitalize">
                         {key.replace(/([A-Z])/g, ' $1').trim()}
                       </div>
-                      <div className="text-amber-600 font-medium">{value}</div>
+                      <div className="text-primary font-medium">{String(value)}</div>
                     </div>
                   ))}
                 </div>
@@ -291,8 +297,8 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 <h3 className="font-semibold text-lg mb-4">What Makes This Special</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {product.uniqueTraits.map((trait: string) => (
-                    <div key={trait} className="flex items-start space-x-3 p-4 bg-amber-50 rounded-lg">
-                      <Star className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
+                                    <div key={trait} className="flex items-start space-x-3 p-4 bg-primary/5 rounded-lg">
+                  <Star className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                       <span className="text-gray-700">{trait}</span>
                     </div>
                   ))}
@@ -303,9 +309,9 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         </Tabs>
 
         {/* Phase 2 Recipe Section */}
-        <Card className="bg-gradient-to-r from-amber-50 to-orange-50 border-amber-200">
+        <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
           <CardContent className="p-8 text-center">
-            <Badge className="mb-4 bg-amber-100 text-amber-800">Coming in Phase 2</Badge>
+            <Badge className="mb-4 bg-primary/10 text-primary/80">Coming in Phase 2</Badge>
             <h3 className="text-2xl font-bold mb-4">Recipe Videos & Ideas</h3>
             <p className="text-gray-600 mb-6">
               We're creating delicious recipe videos and step-by-step guides to help you 

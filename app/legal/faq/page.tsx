@@ -72,14 +72,14 @@ export default function FAQ() {
         </Accordion>
 
         {/* Contact CTA */}
-        <div className="mt-12 text-center bg-amber-50 rounded-lg p-8">
+        <div className="mt-12 text-center bg-primary/5 rounded-lg p-8">
           <h3 className="text-xl font-semibold mb-4">Still have questions?</h3>
           <p className="text-gray-600 mb-6">
             Can't find the answer you're looking for? Our team is here to help.
           </p>
           <a 
             href="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
           >
             Contact Us
           </a>
