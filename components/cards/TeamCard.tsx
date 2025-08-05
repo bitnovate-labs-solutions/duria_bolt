@@ -9,17 +9,17 @@ interface TeamCardProps {
 
 export default function TeamCard({ name, position, image, bio }: TeamCardProps) {
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    <Card className="overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 rounded-2xl border-0 bg-white">
       <div className="aspect-square overflow-hidden">
         <img
           src={image}
           alt={name}
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+          className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
         />
       </div>
       <CardContent className="p-6">
-        <h3 className="font-semibold text-xl mb-1">{name}</h3>
-                    <p className="text-primary font-medium mb-3">{position}</p>
+        <h3 className="font-bold text-xl mb-2 text-black">{name}</h3>
+        <p className="text-primary font-semibold mb-4">{position}</p>
         <p className="text-gray-600 text-sm leading-relaxed">{bio}</p>
       </CardContent>
     </Card>

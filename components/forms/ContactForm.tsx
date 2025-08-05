@@ -33,20 +33,20 @@ export default function ContactForm() {
   };
 
   return (
-    <Card className="max-w-2xl mx-auto">
-      <CardHeader>
-        <CardTitle>Get in Touch</CardTitle>
+    <Card className="max-w-2xl mx-auto rounded-2xl shadow-2xl border-0 bg-white/90 backdrop-blur-sm">
+      <CardHeader className="pb-6">
+        <CardTitle className="text-2xl font-bold text-black">Get in Touch</CardTitle>
       </CardHeader>
       <CardContent>
         {isSubmitted ? (
-          <div className="text-center py-8">
-            <div className="bg-green-50 text-green-800 rounded-lg p-4">
-              <p className="font-medium">Message sent successfully!</p>
-              <p className="text-sm">We'll get back to you within 24 hours.</p>
+          <div className="text-center py-12">
+            <div className="bg-green-50 text-green-800 rounded-xl p-6">
+              <p className="font-semibold text-lg">Message sent successfully!</p>
+              <p className="text-sm mt-2">We'll get back to you within 24 hours.</p>
             </div>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <Input
                 name="name"
@@ -54,6 +54,7 @@ export default function ContactForm() {
                 value={formData.name}
                 onChange={handleChange}
                 required
+                className="rounded-xl py-3 px-4 text-lg"
               />
             </div>
             <div>
@@ -64,6 +65,7 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                className="rounded-xl py-3 px-4 text-lg"
               />
             </div>
             <div>
@@ -74,9 +76,10 @@ export default function ContactForm() {
                 value={formData.message}
                 onChange={handleChange}
                 required
+                className="rounded-xl py-3 px-4 text-lg"
               />
             </div>
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full bg-primary text-black hover:bg-primary/90 py-3 text-lg font-semibold rounded-xl">
               Send Message
             </Button>
           </form>

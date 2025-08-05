@@ -12,7 +12,7 @@ export default function Hero() {
           alt="Premium durian fruits"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/80"></div>
       </div>
 
       {/* Content */}
@@ -27,20 +27,20 @@ export default function Hero() {
           <span className="block text-primary">Export Excellence</span>
         </h1>
         
-        <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl mb-8 text-gray-100 max-w-2xl mx-auto leading-relaxed">
           Experience the finest quality durians from Southeast Asia, 
           carefully selected and delivered worldwide for the ultimate taste experience.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/shop">
+                      <Link href="/products">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg">
               Explore Products
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </Link>
           <Link href="/about">
-            <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg">
+            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-black px-8 py-4 text-lg">
               Our Story
             </Button>
           </Link>

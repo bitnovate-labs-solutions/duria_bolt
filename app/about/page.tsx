@@ -1,5 +1,6 @@
 import TeamCard from '@/components/cards/TeamCard';
 import MediaCard from '@/components/cards/MediaCard';
+import GlobalMap from '@/components/GlobalMap';
 import { Globe, Users, Award, Truck } from 'lucide-react';
 
 const teamMembers = [
@@ -85,26 +86,26 @@ export default function About() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-              <section className="py-16 bg-gradient-to-br from-primary/5 to-primary/10">
+      <section className="py-24 bg-gradient-to-br from-primary/5 to-primary/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-black mb-8">
               About Duria
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               We are passionate about bringing the world's finest durians from Southeast Asia to your table, 
               combining traditional expertise with modern export excellence.
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-primary" />
+              <div key={stat.label} className="text-center group">
+                <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <stat.icon className="w-10 h-10 text-black" />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-1">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
+                <div className="text-4xl font-bold text-black mb-2">{stat.number}</div>
+                <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -112,25 +113,25 @@ export default function About() {
       </section>
 
       {/* Founder's Story */}
-      <section className="py-16">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-black mb-8">
                 Founder's Story
               </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Our journey began in 2005 when David Lim, a third-generation durian farmer, 
                 recognized the untapped potential of sharing premium Southeast Asian durians with the world. 
                 What started as a family orchard in Malaysia has grown into an international export business 
                 spanning 15 countries.
               </p>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 David's vision was simple yet ambitious: to preserve the authentic taste and quality of 
                 traditional durians while making them accessible to durian enthusiasts globally. 
                 This commitment to authenticity and quality remains at the heart of everything we do.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-xl text-gray-600 leading-relaxed">
                 Today, Duria partners with over 500 experienced farmers across Southeast Asia, 
                 ensuring a sustainable supply chain that benefits both our customers and the local communities 
                 that have perfected durian cultivation for generations.
@@ -140,7 +141,7 @@ export default function About() {
               <img
                 src="https://images.pexels.com/photos/4253313/pexels-photo-4253313.jpeg"
                 alt="David Lim in durian orchard"
-                className="rounded-lg shadow-xl"
+                className="rounded-2xl shadow-2xl"
               />
             </div>
           </div>
@@ -148,13 +149,13 @@ export default function About() {
       </section>
 
       {/* Senior Management */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-24 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Leadership Team
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Meet the experienced professionals who drive our mission to deliver 
               the world's finest durians to your doorstep.
             </p>
@@ -168,38 +169,47 @@ export default function About() {
         </div>
       </section>
 
-      {/* Export Countries */}
-      <section className="py-16">
+      {/* Global Reach with Interactive Map */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
               Global Reach
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We proudly export our premium durians to customers across the globe, 
-              bringing the authentic taste of Southeast Asia to these countries.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Explore our worldwide network of business locations and distribution centers 
+              that bring premium durians to customers across the globe.
             </p>
           </div>
           
-          <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-6">
-            {exportCountries.map((country) => (
-              <div key={country.name} className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <div className="text-4xl mb-2">{country.flag}</div>
-                <div className="text-sm font-medium text-gray-900">{country.name}</div>
-              </div>
-            ))}
+          {/* Interactive Map */}
+          <GlobalMap />
+          
+          {/* Export Countries Grid */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold text-black text-center mb-8">
+              Countries We Export To
+            </h3>
+            <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-8">
+              {exportCountries.map((country) => (
+                <div key={country.name} className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="text-5xl mb-3">{country.flag}</div>
+                  <div className="text-sm font-semibold text-black">{country.name}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Media & Press */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-24 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Media & Press
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               See what the industry is saying about Duria and our commitment 
               to quality and innovation in durian exports.
             </p>
