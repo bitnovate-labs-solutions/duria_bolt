@@ -98,8 +98,8 @@ export default function TemporaryLanding() {
             Thank you for your patience.
           </p>
 
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-            If you have any enquiries, please reach out to +6011 1091 4393.
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            If you have any enquiries, please reach out to +6011 1091 4393
           </p>
 
           {/* <div className="flex flex-col sm:flex-row gap-6 justify-center">
