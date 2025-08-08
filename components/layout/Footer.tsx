@@ -2,6 +2,9 @@ import Link from "next/link";
 import { Facebook, Instagram, MessageCircle } from "lucide-react";
 
 export default function Footer() {
+  const date = new Date();
+  let year = date.getFullYear();
+
   return (
     <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -21,9 +24,8 @@ export default function Footer() {
               sharing the king of fruits globally.
             </p>
             <div className="text-sm text-gray-400">
-              <p className="mb-1">Duria Export Sdn. Bhd.</p>
-              <p className="mb-1">Registration No: 202400123A</p>
-              <p>GST Registration No: M2-0012345-0</p>
+              <p className="mb-1">Duria Malaysia Sdn. Bhd.</p>
+              <p className="mb-1">Registration No: 1463077-K</p>
             </div>
           </div>
 
@@ -106,7 +108,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Social Media & Contact */}
+        {/* Social Media & Contact =================================================================== */}
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex space-x-6 mb-4 md:mb-0">
@@ -131,7 +133,7 @@ export default function Footer() {
                 <MessageCircle className="w-5 h-5" />
                 <span className="sr-only">TikTok</span>
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="text-gray-400 hover:text-primary transition-colors"
               >
@@ -139,15 +141,16 @@ export default function Footer() {
                   小
                 </div>
                 <span className="sr-only">XiaoHongShu</span>
-              </a>
+              </a> */}
             </div>
             <div className="text-sm text-gray-400">
-              <p>Email: hello@durianexport.com</p>
-              <p>Phone: +65 9123 4567</p>
+              <p>Wechat: duriaofficial</p>
+              <p>Phone: +6011 1091 4393</p>
             </div>
           </div>
           <div className="text-center text-sm text-gray-500 mt-4 pt-4 border-t border-gray-800">
-            © 2025 Duria Export Sdn. Bhd. All rights reserved.
+            © {year} Duria Malaysia Sdn. Bhd. (1463077-K) & Duria Manufacturing
+            Sdn. Bhd. (1010427-T) All rights reserved.
           </div>
         </div>
       </div>

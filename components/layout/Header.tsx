@@ -10,6 +10,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { config } from '@/lib/config';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,67 +43,73 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-300 hover:text-primary transition-colors duration-200 font-medium"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
+          {!config.showTemporaryLanding && (
+            <nav className="hidden md:flex space-x-8">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-300 hover:text-primary transition-colors duration-200 font-medium"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+          )}
 
           {/* Desktop Language Switch */}
-          <div className="hidden md:flex items-center space-x-4">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button 
-                  size="sm" 
-                  variant="ghost"
-                  className="text-white hover:bg-white/10 rounded-xl px-4 py-2 transition-all duration-300"
-                >
-                  <span className="font-medium flex items-center">
-                    <span className="text-base leading-none">{languages.find(lang => lang.code === currentLanguage)?.flag}</span>
-                    <span className="ml-2">{currentLanguage}</span>
-                  </span>
-                  <ChevronDown className="w-4 h-4 ml-2" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48 bg-white border-0 shadow-2xl rounded-2xl">
-                {languages.map((language) => (
-                  <DropdownMenuItem
-                    key={language.code}
-                    className={`flex items-center space-x-3 px-4 py-3 cursor-pointer hover:bg-gray-50 rounded-xl mx-2 my-1 transition-all duration-200 ${
-                      currentLanguage === language.code ? 'bg-primary/10 text-primary' : 'text-gray-700'
-                    }`}
-                    onClick={() => setCurrentLanguage(language.code)}
+          {!config.showTemporaryLanding && (
+            <div className="hidden md:flex items-center space-x-4">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button 
+                    size="sm" 
+                    variant="ghost"
+                    className="text-white hover:bg-white/10 rounded-xl px-4 py-2 transition-all duration-300"
                   >
-                    <span className="text-lg">{language.flag}</span>
-                    <span className="font-medium">{language.name}</span>
-                    {currentLanguage === language.code && (
-                      <div className="ml-auto w-2 h-2 bg-primary rounded-full"></div>
-                    )}
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
+                    <span className="font-medium flex items-center">
+                      <span className="text-base leading-none">{languages.find(lang => lang.code === currentLanguage)?.flag}</span>
+                      <span className="ml-2">{currentLanguage}</span>
+                    </span>
+                    <ChevronDown className="w-4 h-4 ml-2" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-48 bg-white border-0 shadow-2xl rounded-2xl">
+                  {languages.map((language) => (
+                    <DropdownMenuItem
+                      key={language.code}
+                      className={`flex items-center space-x-3 px-4 py-3 cursor-pointer hover:bg-gray-50 rounded-xl mx-2 my-1 transition-all duration-200 ${
+                        currentLanguage === language.code ? 'bg-primary/10 text-primary' : 'text-gray-700'
+                      }`}
+                      onClick={() => setCurrentLanguage(language.code)}
+                    >
+                      <span className="text-lg">{language.flag}</span>
+                      <span className="font-medium">{language.name}</span>
+                      {currentLanguage === language.code && (
+                        <div className="ml-auto w-2 h-2 bg-primary rounded-full"></div>
+                      )}
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+          )}
 
           {/* Mobile menu button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="md:hidden text-white hover:bg-white/10"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </Button>
+          {!config.showTemporaryLanding && (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="md:hidden text-white hover:bg-white/10"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </Button>
+          )}
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
+        {!config.showTemporaryLanding && isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-800">
             <nav className="flex flex-col space-y-2">
               {navigation.map((item) => (

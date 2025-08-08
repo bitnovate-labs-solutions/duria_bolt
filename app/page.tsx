@@ -4,6 +4,8 @@ import NewsletterForm from "@/components/forms/NewsletterForm";
 import { Button } from "@/components/ui/button";
 import { Star, Truck, Shield, Globe, Quote } from "lucide-react";
 import Link from "next/link";
+import TemporaryLanding from "@/components/TemporaryLanding";
+import { config } from "@/lib/config";
 
 const featuredProducts = [
   {
@@ -134,6 +136,12 @@ const reviews = [
 ];
 
 export default function Home() {
+  // Show temporary landing page if configured
+  if (config.showTemporaryLanding) {
+    return <TemporaryLanding />;
+  }
+
+  // Show main website content
   return (
     <div className="min-h-screen">
       <Hero />
