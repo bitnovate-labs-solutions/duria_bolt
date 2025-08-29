@@ -80,12 +80,12 @@ export default function TemporaryLanding() {
 
         {/* COMING SOON */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center bg-gray-900 text-yellow-400 border border-gray-700 px-6 py-3 rounded-lg text-sm font-medium mb-8 mt-8">
+          <div className="inline-flex items-center bg-gray-900 text-primary border border-gray-700 px-6 py-3 rounded-lg text-sm font-medium mb-8 mt-8">
             <Star className="w-4 h-4 mr-2" />
             Coming Soon - Premium Durian Experience
           </div>
 
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 tracking-tight">
+          <h2 className="text-5xl md:text-6xl font-bold mb-8 tracking-tight text-primary">
             Website Under Construction
           </h2>
 
@@ -99,7 +99,7 @@ export default function TemporaryLanding() {
           </p>
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            If you have any enquiries, please reach out to +6011 1091 4393
+            If you have any enquiries, please reach out to
           </p>
 
           {/* <div className="flex flex-col sm:flex-row gap-6 justify-center">

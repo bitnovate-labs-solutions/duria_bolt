@@ -80,7 +80,7 @@ export default function Hero() {
           <Link href="/products" className="w-full sm:w-auto">
             <Button
               size="lg"
-              className="w-2/3 sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg"
+              className="w-2/3 sm:w-auto bg-primary hover:bg-primary/90 text-black px-8 py-4 text-lg"
             >
               Explore Products
             </Button>
@@ -89,7 +89,7 @@ export default function Hero() {
             <Button
               variant="outline"
               size="lg"
-              className="w-2/3 sm:w-auto border-primary text-primary hover:bg-primary hover:text-black px-8 py-4 text-lg"
+              className="w-2/3 sm:w-auto text-yellow-500 hover:bg-primary hover:text-black px-8 py-4 text-lg"
             >
               Our Story
             </Button>
