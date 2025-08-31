@@ -99,7 +99,13 @@ export default function TemporaryLanding() {
           </p>
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            If you have any enquiries, please reach out to
+            For official website orders, please visit <br />
+            <a
+              href="https://shop.duria.com.my"
+              className="underline text-primary"
+            >
+              shop.duria.com.my
+            </a>
           </p>
 
           {/* <div className="flex flex-col sm:flex-row gap-6 justify-center">
