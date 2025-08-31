@@ -75,6 +75,15 @@ export default function TemporaryLanding() {
             <p className="text-lg text-gray-400">
               Sales champion for 12 consecutive years
             </p>
+
+            <div className="w-full sm:w-3/5 mx-auto mt-10 p-6 border border-primary bg-primary/50 rounded-2xl ">
+              <p className="text-xl text-white max-w-2xl mx-auto leading-relaxed">
+                For official website orders, please visit <br />
+                <a href="https://shop.duria.com.my" className="underline">
+                  shop.duria.com.my
+                </a>
+              </p>
+            </div>
           </div>
         </div>
 
@@ -96,16 +105,6 @@ export default function TemporaryLanding() {
             products from Malaysia with world-class service.
             <br />
             Thank you for your patience.
-          </p>
-
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            For official website orders, please visit <br />
-            <a
-              href="https://shop.duria.com.my"
-              className="underline text-primary"
-            >
-              shop.duria.com.my
-            </a>
           </p>
 
           {/* <div className="flex flex-col sm:flex-row gap-6 justify-center">
