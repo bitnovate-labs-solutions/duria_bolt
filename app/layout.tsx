@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: 'Duria - Premium Durian Export & Lifestyle Brand',
   description: 'Experience the finest quality durians from Southeast Asia. Duria specializes in premium durian export, bringing authentic flavors worldwide with exceptional quality and service.',
   keywords: 'durian, premium durian, durian export, Musang King, D24, Southeast Asia, premium fruits',
+  icons: {
+    icon: '/favicon-96x96.png',
+  },
 };
 
 export default function RootLayout({

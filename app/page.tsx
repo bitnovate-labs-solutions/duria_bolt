@@ -1,8 +1,22 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
 import Hero from "@/components/sections/Hero";
 import ProductCard from "@/components/cards/ProductCard";
+import CarouselCard from "@/components/cards/CarouselCard";
 import NewsletterForm from "@/components/forms/NewsletterForm";
 import { Button } from "@/components/ui/button";
-import { Star, Truck, Shield, Globe, Quote } from "lucide-react";
+import {
+  Star,
+  Truck,
+  Shield,
+  Globe,
+  Quote,
+  CheckCircle,
+  Award,
+  TrendingUp,
+} from "lucide-react";
 import Link from "next/link";
 import TemporaryLanding from "@/components/TemporaryLanding";
 import { config } from "@/lib/config";
@@ -47,30 +61,37 @@ const featuredProducts = [
   },
 ];
 
+// WHY CHOOSE DURIA? -----------------------------------------------------------------------------
 const features = [
   {
     icon: Star,
     title: "Premium Quality",
     description:
-      "Hand-selected durians from the finest orchards in Southeast Asia",
+      "We craft premium durian products using only the finest, hand-selected durian fruits",
   },
   {
-    icon: Shield,
+    icon: Award,
     title: "Halal Certified",
     description:
-      "All our products are halal certified and meet international food safety standards",
+      "All our offerings are halal certified and comply with the highest international food safety standards",
+  },
+  {
+    icon: CheckCircle,
+    title: "HACCP Certified",
+    description:
+      "Our production follows strict HACCP guidelines to ensure safety and quality at every step",
   },
   {
     icon: Truck,
     title: "Global Shipping",
     description:
-      "Fast and reliable delivery to countries worldwide with temperature-controlled logistics",
+      "Enjoy fast, reliable delivery worldwide with temperature-controlled logistics for freshness guaranteed",
   },
   {
-    icon: Globe,
-    title: "Expert Knowledge",
+    icon: TrendingUp,
+    title: "Expertise You Can Trust",
     description:
-      "Decades of experience in durian cultivation, processing, and export",
+      "With decades of experience, we bring you authentic durian products backed by deep knowledge and exceptional service",
   },
 ];
 
@@ -144,24 +165,29 @@ export default function Home() {
   // Show main website content
   return (
     <div className="min-h-screen">
+      {/* HERO SECTION ----------------------------------------------------------------------------- */}
       <Hero />
 
-      {/* Features Section */}
+      {/* WHY CHOOSE DURIA SECTION ----------------------------------------------------------------------------- */}
       <section className="py-24 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Duria?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            {/* REMOVED BASED ON SITEMAP GIVEN  */}
+            {/* <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               We're committed to delivering the finest durian experience through
               quality, authenticity, and exceptional service.
-            </p>
+            </p> */}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="flex flex-wrap justify-center gap-12">
             {features.map((feature) => (
-              <div key={feature.title} className="text-center group">
+              <div
+                key={feature.title}
+                className="text-center group w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)] max-w-sm"
+              >
                 <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-10 h-10 text-black" />
                 </div>
@@ -177,8 +203,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Products */}
-      <section className="py-24 bg-white">
+      {/* FEATURED PRODUCTS SECTION (REMOVED BASED ON SITEMAP REQUIREMENTS) ----------------------------------------------------------------------------- */}
+      {/* <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
@@ -207,51 +233,106 @@ export default function Home() {
             </Link>
           </div>
         </div>
+      </section> */}
+
+      {/* PRODUCTS INNOVATION AND HIGHLIGHTS SECTION ----------------------------------------------------------------------------- */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+              Products Innovation and Highlights
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
+              Through strict raw material control, fully automated production
+              lines and Spanish & German equipment, we continuously innovate
+              products, open up online and offline marketing links, and excel in
+              creating popular durian products.
+            </p>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Premium brand, focusing on differentiation, creating a festive
+              gift-giving scene, and forming a Musang King durian derivative
+              product with unique market competitiveness in terms of quality,
+              brand and appearance.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Product Categories with Carousel */}
+            {[
+              "3D Musang King Durian Ice Cream",
+              "Musang King Durian Snowy Mooncake",
+              "Premium Durian Mooncake",
+              "Twister Blackthorn Durian Snowy Mooncake",
+              "Durian Mochi Series",
+              "Musang King Durian Snowy Skin",
+              "Frozen Durian Pulp",
+              "Frozen Durian Whole Fruit",
+              "Musang King Durian Paste",
+            ].map((productName, index) => (
+              <CarouselCard
+                key={index}
+                productName={productName}
+                index={index}
+              />
+            ))}
+          </div>
+        </div>
       </section>
 
-      {/* About Preview */}
+      {/* OUR STORY SECTION ----------------------------------------------------------------------------- */}
       <section className="py-24 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <div className="order-2 lg:order-1">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
                 Our Story
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Founded with a passion for sharing the extraordinary taste of
-                premium durians, Duria has grown from a local farm to an
-                international export company. We work directly with experienced
-                growers across Southeast Asia to bring you the finest quality
-                durians.
+                Founded in 2005 by Wong Woei Ming with support from Malaysia’s
+                Ministry of Agriculture, Duria established the country’s first
+                durian collection factory.
               </p>
               <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-                Every durian we export is carefully selected, tested for
-                quality, and handled with the utmost care to preserve its
-                authentic flavor and texture.
+                Since 2008, it doubled processed durian exports to Singapore and
+                pioneered Malaysian durian entry into Hong Kong in 2009,
+                boosting Musang King’s popularity.
+              </p>
+              <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+                Between 2010 and 2011, Duria was the first to enter Mainland
+                China’s market in large volumes after Premier Wen Jiabao
+                advocated for durian trade.
+              </p>
+              <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+                From 2012 onwards, the company expanded domestically and
+                internationally, supplying Malaysian supermarkets and exporting
+                to China, Singapore, Australia, New Zealand, the UK, and the US,
+                continuously strengthening Malaysia’s durian industry.
               </p>
               <Link href="/about">
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-primary text-primary hover:bg-primary hover:text-black px-8 py-4 text-lg font-semibold rounded-xl"
+                  className="border-primary text-primary hover:bg-primary hover:text-black px-8 py-4 text-lg font-semibold rounded-xl w-full sm:w-auto"
                 >
                   Learn More About Us
                 </Button>
               </Link>
             </div>
-            <div className="relative">
-              <img
-                src="https://images.pexels.com/photos/4253313/pexels-photo-4253313.jpeg"
+            <div className="relative order-1 lg:order-2">
+              <Image
+                src="/about/about_1.jpg"
                 alt="Durian farm and cultivation"
-                className="rounded-2xl shadow-2xl"
+                width={600}
+                height={500}
+                className="rounded-2xl shadow-2xl h-64 sm:h-80 lg:h-96"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Reviews Section */}
-      <section className="py-24 bg-white">
+      {/* REVIEWS (REMOVED BASED ON SITEMAP REQUIREMENTS)   ----------------------------------------------------------------------------- */}
+      {/* <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
@@ -317,9 +398,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <NewsletterForm />
+      {/* NEWSLETTER SECTION (REMOVED BASED ON SITEMAP REQUIREMENTS)   ----------------------------------------------------------------------------- */}
+      {/* <NewsletterForm /> */}
     </div>
   );
 }
