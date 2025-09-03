@@ -4,6 +4,8 @@ import Image from "next/image";
 import TeamCard from "@/components/cards/TeamCard";
 import MediaCard from "@/components/cards/MediaCard";
 import GlobalMap from "@/components/GlobalMap";
+import AnimatedCounter from "@/components/ui/animated-counter";
+import { useFadeUp, useTimelineItemFadeUp } from "@/hooks/use-fade-up";
 import { Globe, Users, Award, Truck } from "lucide-react";
 
 // OUR LEADERSHIP TEAM DATA ----------------------------------------------
@@ -84,9 +86,9 @@ const exportCountries = [
 
 // HERO STATS ----------------------------------------------
 const stats = [
-  { icon: Globe, number: "10+", label: "Export Countries" },
-  { icon: Award, number: "25+", label: "Quality Awards and Accolades" },
-  { icon: Truck, number: "100,000+", label: "Shipments Delivered" },
+  { icon: Globe, number: 10, suffix: "+", label: "Export Countries" },
+  { icon: Award, number: 25, suffix: "+", label: "Quality Awards and Accolades" },
+  { icon: Truck, number: 100000, suffix: "+", label: "Shipments Delivered" },
 ];
 
 // ABOUT DURIA TIMELINE DATA ----------------------------------------------
@@ -127,6 +129,17 @@ const timelineData = [
 
 export default function About() {
   const [activeYear, setActiveYear] = useState(0);
+  
+  // Fade-up animations for milestone items
+  const headerFadeUp = useFadeUp({ threshold: 0.3 });
+  
+  // Individual timeline item animations
+  const timelineItem1 = useTimelineItemFadeUp(0);
+  const timelineItem2 = useTimelineItemFadeUp(200);
+  const timelineItem3 = useTimelineItemFadeUp(400);
+  const timelineItem4 = useTimelineItemFadeUp(600);
+  const timelineItem5 = useTimelineItemFadeUp(800);
+  
   return (
     <div className="min-h-screen">
       {/* HERO SECTION ----------------------------------------------------------------------------- */}
@@ -144,13 +157,18 @@ export default function About() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">
-            {stats.map((stat) => (
+            {stats.map((stat, index) => (
               <div key={stat.label} className="text-center group">
                 <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <stat.icon className="w-10 h-10 text-black" />
                 </div>
                 <div className="text-4xl font-bold text-black mb-2">
-                  {stat.number}
+                  <AnimatedCounter 
+                    end={stat.number} 
+                    suffix={stat.suffix}
+                    delay={index * 200}
+                    duration={2500}
+                  />
                 </div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>
@@ -380,7 +398,14 @@ export default function About() {
       {/* MILESTONE TIMELINE SECTION ----------------------------------------------------------------------------- */}
       <section className="py-24 bg-gradient-to-br from-primary/5 to-primary/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div 
+            ref={headerFadeUp.elementRef}
+            className={`text-center mb-16 transition-all duration-1000 ease-out ${
+              headerFadeUp.isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-8'
+            }`}
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
               Company Milestone
             </h2>
@@ -401,7 +426,14 @@ export default function About() {
             {/* Timeline Items */}
             <div className="space-y-12">
               {/* 2008-2009 */}
-              <div className="relative flex flex-col md:flex-row items-center">
+              <div 
+                ref={timelineItem1.elementRef}
+                className={`relative flex flex-col md:flex-row items-center transition-all duration-1000 ease-out ${
+                  timelineItem1.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-8'
+                }`}
+              >
                 {/* Desktop Timeline Dot */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg z-10 hidden md:block"></div>
 
@@ -437,7 +469,14 @@ export default function About() {
               </div>
 
               {/* 2012 */}
-              <div className="relative flex flex-col md:flex-row items-center">
+              <div 
+                ref={timelineItem2.elementRef}
+                className={`relative flex flex-col md:flex-row items-center transition-all duration-1000 ease-out ${
+                  timelineItem2.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-8'
+                }`}
+              >
                 {/* Desktop Timeline Dot */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg z-10 hidden md:block"></div>
 
@@ -473,7 +512,14 @@ export default function About() {
               </div>
 
               {/* 2015 */}
-              <div className="relative flex flex-col md:flex-row items-center">
+              <div 
+                ref={timelineItem3.elementRef}
+                className={`relative flex flex-col md:flex-row items-center transition-all duration-1000 ease-out ${
+                  timelineItem3.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-8'
+                }`}
+              >
                 {/* Desktop Timeline Dot */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg z-10 hidden md:block"></div>
 
@@ -510,7 +556,14 @@ export default function About() {
               </div>
 
               {/* 2018 */}
-              <div className="relative flex flex-col md:flex-row items-center">
+              <div 
+                ref={timelineItem4.elementRef}
+                className={`relative flex flex-col md:flex-row items-center transition-all duration-1000 ease-out ${
+                  timelineItem4.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-8'
+                }`}
+              >
                 {/* Desktop Timeline Dot */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg z-10 hidden md:block"></div>
 
@@ -546,7 +599,14 @@ export default function About() {
               </div>
 
               {/* 2022 */}
-              <div className="relative flex flex-col md:flex-row items-center">
+              <div 
+                ref={timelineItem5.elementRef}
+                className={`relative flex flex-col md:flex-row items-center transition-all duration-1000 ease-out ${
+                  timelineItem5.isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-8'
+                }`}
+              >
                 {/* Desktop Timeline Dot */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg z-10 hidden md:block"></div>
 

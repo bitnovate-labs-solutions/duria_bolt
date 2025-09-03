@@ -310,9 +310,8 @@ export default function Home() {
               </p>
               <Link href="/about">
                 <Button
-                  variant="outline"
                   size="lg"
-                  className="border-primary text-primary hover:bg-primary hover:text-black px-8 py-4 text-lg font-semibold rounded-xl w-full sm:w-auto"
+                  className="bg-primary hover:bg-primary/90 text-black px-8 py-4 text-lg w-full sm:w-auto"
                 >
                   Learn More About Us
                 </Button>
