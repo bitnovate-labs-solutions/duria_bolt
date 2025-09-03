@@ -85,21 +85,34 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/products" className="w-full sm:w-auto">
+          <a
+            href="https://shop.duria.com.my"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto"
+          >
             <Button
               size="lg"
-              className="w-2/3 sm:w-auto bg-primary hover:bg-primary/90 text-black px-8 py-4 text-lg"
+              className="w-2/3 sm:w-[210.47px] bg-primary hover:bg-primary/90 hover:text-white text-black px-8 py-4 text-lg"
             >
-              Explore Products
+              Shop Now
             </Button>
-          </Link>
+          </a>
           <Link href="/about" className="w-full sm:w-auto">
             <Button
               variant="outline"
               size="lg"
-              className="w-2/3 sm:w-auto text-yellow-500 hover:bg-primary hover:text-black px-8 py-4 text-lg"
+              className="w-2/3 sm:w-auto text-yellow-500 hover:bg-white hover:text-black px-8 py-4 text-lg"
             >
               Our Story
+            </Button>
+          </Link>
+          <Link href="/products" className="w-full sm:w-auto">
+            <Button
+              size="lg"
+              className="w-2/3 sm:w-auto bg-primary hover:bg-primary/90 hover:text-white text-black px-8 py-4 text-lg"
+            >
+              Explore Products
             </Button>
           </Link>
         </div>

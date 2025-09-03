@@ -44,7 +44,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           {!config.showTemporaryLanding && (
-            <nav className="hidden md:flex space-x-8">
+            <nav className="hidden md:flex space-x-8 items-center">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -54,6 +54,18 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
+              <a
+                href="https://shop.duria.com.my"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="sm"
+                  className="bg-primary hover:bg-primary/90 text-black px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300"
+                >
+                  Shop Now
+                </Button>
+              </a>
             </nav>
           )}
 
@@ -137,6 +149,20 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
+              <a
+                href="https://shop.duria.com.my"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Button
+                  size="sm"
+                  className="w-full bg-primary hover:bg-primary/90 text-black px-4 py-3 text-sm font-medium rounded-xl transition-all duration-300"
+                >
+                  Shop Now
+                </Button>
+              </a>
               <div className="mt-4 space-y-2">
                 <p className="text-white/70 text-sm font-medium px-2">
                   Language
