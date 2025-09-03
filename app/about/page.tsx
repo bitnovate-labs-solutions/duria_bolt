@@ -260,11 +260,11 @@ export default function About() {
             <div className="lg:col-span-2">
               <div className="bg-white p-2 pt-0 lg:p-8 lg:pt-0 rounded-2xl">
                 {/* Image - Only show if image exists */}
-                {timelineData[activeYear].image && (
+                {timelineData[activeYear].image && timelineData[activeYear].imageAlt && (
                   <div className="relative mb-8">
                     <Image
-                      src={timelineData[activeYear].image}
-                      alt={timelineData[activeYear].imageAlt}
+                      src={timelineData[activeYear].image!}
+                      alt={timelineData[activeYear].imageAlt!}
                       width={800}
                       height={500}
                       className="w-full h-96 object-cover rounded-2xl"
