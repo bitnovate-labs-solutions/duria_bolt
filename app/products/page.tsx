@@ -151,7 +151,7 @@ const cakes = [
   {
     id: "durian-cake",
     title: "Musang King Thousand Layer Cake (Boxed)",
-    image: "/mochi/mochi-set-optimized.jpg", // Using existing image as placeholder
+    image: "/cake/durian-cake.jpg",
     description: "",
     category: "Cake",
     // description:
@@ -174,7 +174,7 @@ const springRolls = [
   {
     id: "durian-spring-rolls",
     title: "Musang King Durian Spring Rolls (Pre-made Dessert)",
-    image: "/mochi/mochi-set-optimized.jpg", // Using existing image as placeholder
+    image: "/spring-rolls/durian-spring-rolls.jpg",
     description: "",
     category: "Spring Rolls",
     // description:
@@ -196,7 +196,7 @@ const springRolls = [
 const frozenDurianPulp = [
   {
     id: "musang-king-pulp",
-    title: "Musang King Frozen Pulp",
+    title: "D101 Durian Pulp",
     image: "/frozen_pulp/durian_pulp1.jpg",
     description: "",
     category: "Frozen Durian Pulp",
@@ -206,7 +206,7 @@ const frozenDurianPulp = [
   },
   {
     id: "d24-pulp",
-    title: "D24 Frozen Pulp",
+    title: "Musang King Durian Pulp",
     image: "/frozen_pulp/durian_pulp2.jpg",
     description: "",
     category: "Frozen Durian Pulp",
@@ -216,7 +216,7 @@ const frozenDurianPulp = [
   },
   {
     id: "mixed-pulp",
-    title: "Mixed Durian Pulp",
+    title: "D24 Durian Pulp",
     image: "/frozen_pulp/durian_pulp3.jpg",
     description: "",
     category: "Frozen Durian Pulp",
@@ -231,7 +231,7 @@ const musangKingPaste = [
   {
     id: "musang-king-paste",
     title: "D24 Durian Puree",
-    image: "/frozen_pulp/durian_pulp1.jpg", // Using existing image as placeholder
+    image: "",
     description: "",
     category: "Musang King Durian Paste",
     // description:
@@ -241,7 +241,7 @@ const musangKingPaste = [
   {
     id: "durian-paste-premium",
     title: "Musang King Durian Paste",
-    image: "/frozen_pulp/durian_pulp2.jpg", // Using existing image as placeholder
+    image: "",
     description: "",
     category: "Musang King Durian Paste",
     // description:
@@ -251,7 +251,7 @@ const musangKingPaste = [
   {
     id: "durian-paste-premium",
     title: "D24 Durian Paste",
-    image: "/frozen_pulp/durian_pulp3.jpg", // Using existing image as placeholder
+    image: "",
     description: "",
     category: "Musang King Durian Paste",
     // description:
