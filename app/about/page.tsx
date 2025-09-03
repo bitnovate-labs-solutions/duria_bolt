@@ -36,58 +36,63 @@ import { Globe, Users, Award, Truck } from "lucide-react";
 //   },
 // ];
 
-const mediaArticles = [
-  {
-    title: "Duria Exports Premium Fruits to 15 Countries",
-    image: "https://images.pexels.com/photos/6419733/pexels-photo-6419733.jpeg",
-    excerpt:
-      "Local durian export company reaches new milestone in international expansion, bringing Southeast Asian delicacy to global markets.",
-    source: "Food & Beverage News",
-    date: "2024-01-15",
-    link: "#",
-  },
-  {
-    title: "The Rise of Premium Durian Exports",
-    image: "https://images.pexels.com/photos/4253313/pexels-photo-4253313.jpeg",
-    excerpt:
-      "Industry report highlights the growing demand for high-quality durians in international markets, featuring Duria as a leading exporter.",
-    source: "Asia Trade Magazine",
-    date: "2023-12-08",
-    link: "#",
-  },
-  {
-    title: "Sustainable Durian Farming Practices",
-    image: "https://images.pexels.com/photos/5737486/pexels-photo-5737486.jpeg",
-    excerpt:
-      "Duria partners with local farmers to implement sustainable farming practices, ensuring quality while protecting the environment.",
-    source: "Green Agriculture Today",
-    date: "2023-11-22",
-    link: "#",
-  },
-];
+// const mediaArticles = [
+//   {
+//     title: "Duria Exports Premium Fruits to 15 Countries",
+//     image: "https://images.pexels.com/photos/6419733/pexels-photo-6419733.jpeg",
+//     excerpt:
+//       "Local durian export company reaches new milestone in international expansion, bringing Southeast Asian delicacy to global markets.",
+//     source: "Food & Beverage News",
+//     date: "2024-01-15",
+//     link: "#",
+//   },
+//   {
+//     title: "The Rise of Premium Durian Exports",
+//     image: "https://images.pexels.com/photos/4253313/pexels-photo-4253313.jpeg",
+//     excerpt:
+//       "Industry report highlights the growing demand for high-quality durians in international markets, featuring Duria as a leading exporter.",
+//     source: "Asia Trade Magazine",
+//     date: "2023-12-08",
+//     link: "#",
+//   },
+//   {
+//     title: "Sustainable Durian Farming Practices",
+//     image: "https://images.pexels.com/photos/5737486/pexels-photo-5737486.jpeg",
+//     excerpt:
+//       "Duria partners with local farmers to implement sustainable farming practices, ensuring quality while protecting the environment.",
+//     source: "Green Agriculture Today",
+//     date: "2023-11-22",
+//     link: "#",
+//   },
+// ];
 
-const exportCountries = [
-  { name: "Singapore", flag: "🇸🇬" },
-  { name: "Malaysia", flag: "🇲🇾" },
-  { name: "China", flag: "🇨🇳" },
-  { name: "Hong Kong", flag: "🇭🇰" },
-  { name: "Japan", flag: "🇯🇵" },
-  { name: "South Korea", flag: "🇰🇷" },
-  { name: "Australia", flag: "🇦🇺" },
-  { name: "United States", flag: "🇺🇸" },
-  { name: "Canada", flag: "🇨🇦" },
-  { name: "United Kingdom", flag: "🇬🇧" },
-  { name: "Germany", flag: "🇩🇪" },
-  { name: "France", flag: "🇫🇷" },
-  { name: "Netherlands", flag: "🇳🇱" },
-  { name: "UAE", flag: "🇦🇪" },
-  { name: "New Zealand", flag: "🇳🇿" },
-];
+// const exportCountries = [
+//   { name: "Singapore", flag: "🇸🇬" },
+//   { name: "Malaysia", flag: "🇲🇾" },
+//   { name: "China", flag: "🇨🇳" },
+//   { name: "Hong Kong", flag: "🇭🇰" },
+//   { name: "Japan", flag: "🇯🇵" },
+//   { name: "South Korea", flag: "🇰🇷" },
+//   { name: "Australia", flag: "🇦🇺" },
+//   { name: "United States", flag: "🇺🇸" },
+//   { name: "Canada", flag: "🇨🇦" },
+//   { name: "United Kingdom", flag: "🇬🇧" },
+//   { name: "Germany", flag: "🇩🇪" },
+//   { name: "France", flag: "🇫🇷" },
+//   { name: "Netherlands", flag: "🇳🇱" },
+//   { name: "UAE", flag: "🇦🇪" },
+//   { name: "New Zealand", flag: "🇳🇿" },
+// ];
 
 // HERO STATS ----------------------------------------------
 const stats = [
   { icon: Globe, number: 10, suffix: "+", label: "Export Countries" },
-  { icon: Award, number: 25, suffix: "+", label: "Quality Awards and Accolades" },
+  {
+    icon: Award,
+    number: 25,
+    suffix: "+",
+    label: "Quality Awards and Accolades",
+  },
   { icon: Truck, number: 100000, suffix: "+", label: "Shipments Delivered" },
 ];
 
@@ -104,24 +109,18 @@ const timelineData = [
   {
     year: "2008-2011",
     title: "Market Expansion",
-    image: "/about/about_2.jpg",
-    imageAlt: "Modern food processing facility with Multivac equipment",
     content:
       "Since 2008, Duria doubled exports to Singapore and entered the Hong Kong market in 2009, significantly boosting Musang King's popularity. Between 2010 and 2011, Duria became the first company to export durian to Mainland China in large volumes following Premier Wen Jiabao's endorsement.",
   },
   {
     year: "2012-2015",
     title: "Global Reach",
-    image: "/about/about_3.jpg",
-    imageAlt: "Food processing facility with conveyor belt system",
     content:
       "The company expanded its reach, supplying Malaysian supermarkets and exporting to China, Singapore, Australia, New Zealand, the UK, and the US. This period significantly strengthened Malaysia's durian industry.",
   },
   {
     year: "2016-2017",
     title: "Innovation & Growth",
-    image: "/about/about_4.jpg",
-    imageAlt: "Workers operating industrial food processing equipment",
     content:
       "In 2016, Duria was chosen as an Entry Point Project (EPP) under the Northern Corridor Economic Region (NCER) with Perak government support under the Northern Corridor Economic Region (NCER) with Perak government support to further develop the durian sector. With AgroBank support, Duria built Malaysia's first durian pilot project featuring advanced High Pressure Processing (HPP) and Nitrogen Freezing Tunnel technologies. Consequently, the factory was relocated to Kamunting, Perak. In 2017, Duria established a primary processing factory in Pengkalan Hulu through a joint venture with smallholders and collectors. This initiative boosted local economies in Greater Kamunting and Pengkalan Hulu, created jobs, and included CSR programs to support smallholder farmers. It enhanced income for farmers in Pengkalan Hulu, Batu Kurau, and Greater Kamunting, contributing to sustainable rural development.",
   },
@@ -129,17 +128,17 @@ const timelineData = [
 
 export default function About() {
   const [activeYear, setActiveYear] = useState(0);
-  
+
   // Fade-up animations for milestone items
   const headerFadeUp = useFadeUp({ threshold: 0.3 });
-  
+
   // Individual timeline item animations
   const timelineItem1 = useTimelineItemFadeUp(0);
   const timelineItem2 = useTimelineItemFadeUp(200);
   const timelineItem3 = useTimelineItemFadeUp(400);
   const timelineItem4 = useTimelineItemFadeUp(600);
   const timelineItem5 = useTimelineItemFadeUp(800);
-  
+
   return (
     <div className="min-h-screen">
       {/* HERO SECTION ----------------------------------------------------------------------------- */}
@@ -163,8 +162,8 @@ export default function About() {
                   <stat.icon className="w-10 h-10 text-black" />
                 </div>
                 <div className="text-4xl font-bold text-black mb-2">
-                  <AnimatedCounter 
-                    end={stat.number} 
+                  <AnimatedCounter
+                    end={stat.number}
                     suffix={stat.suffix}
                     delay={index * 200}
                     duration={2500}
@@ -260,16 +259,18 @@ export default function About() {
             {/* Content Area */}
             <div className="lg:col-span-2">
               <div className="bg-white p-2 pt-0 lg:p-8 lg:pt-0 rounded-2xl">
-                {/* Image */}
-                <div className="relative mb-8">
-                  <Image
-                    src={timelineData[activeYear].image}
-                    alt={timelineData[activeYear].imageAlt}
-                    width={800}
-                    height={500}
-                    className="w-full h-96 object-cover rounded-2xl"
-                  />
-                </div>
+                {/* Image - Only show if image exists */}
+                {timelineData[activeYear].image && (
+                  <div className="relative mb-8">
+                    <Image
+                      src={timelineData[activeYear].image}
+                      alt={timelineData[activeYear].imageAlt}
+                      width={800}
+                      height={500}
+                      className="w-full h-96 object-cover rounded-2xl"
+                    />
+                  </div>
+                )}
 
                 {/* Content */}
                 <div>
@@ -299,35 +300,96 @@ export default function About() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white p-8 lg:p-12 rounded-3xl shadow-xl border border-gray-100">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-                <div>
-                  <p className="text-gray-600 leading-relaxed text-lg mb-6">
-                    Founded in 2005 by Wong Woei Ming with support from
-                    Malaysia's Ministry of Agriculture, Duria established the
-                    country's first durian collection factory.
-                  </p>
-                  <p className="text-gray-600 leading-relaxed text-lg">
-                    Since 2008, it doubled processed durian exports to Singapore
-                    and pioneered Malaysian durian entry into Hong Kong in 2009,
-                    boosting Musang King's popularity.
-                  </p>
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+              {/* Header with large image */}
+              <div className="relative h-64 md:h-80">
+                <Image
+                  src="/about/about_2.jpg"
+                  alt="Modern food processing facility with Multivac equipment"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+              </div>
+
+              {/* Content Grid */}
+              <div className="p-8 lg:p-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                  {/* Left Column - Text Content */}
+                  <div className="space-y-6">
+                    <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl">
+                      <h4 className="text-xl font-semibold text-black mb-4">The Beginning</h4>
+                      <p className="text-gray-600 leading-relaxed">
+                        Founded in 2005 by Wong Woei Ming with support from
+                        Malaysia's Ministry of Agriculture, Duria established the
+                        country's first durian collection factory.
+                      </p>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl">
+                      <h4 className="text-xl font-semibold text-black mb-4">International Expansion</h4>
+                      <p className="text-gray-600 leading-relaxed">
+                        Since 2008, it doubled processed durian exports to Singapore
+                        and pioneered Malaysian durian entry into Hong Kong in 2009,
+                        boosting Musang King's popularity.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Right Column - Text Content */}
+                  <div className="space-y-6">
+                    <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl">
+                      <h4 className="text-xl font-semibold text-black mb-4">China Market Entry</h4>
+                      <p className="text-gray-600 leading-relaxed">
+                        Between 2010 and 2011, Duria was the first to enter Mainland
+                        China's market in large volumes after Premier Wen Jiabao
+                        advocated for durian trade.
+                      </p>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl">
+                      <h4 className="text-xl font-semibold text-black mb-4">Global Growth</h4>
+                      <p className="text-gray-600 leading-relaxed">
+                        From 2012 onwards, the company expanded domestically and
+                        internationally, supplying Malaysian supermarkets and
+                        exporting to China, Singapore, Australia, New Zealand, the
+                        UK, and the US, continuously strengthening Malaysia's durian
+                        industry.
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
-                <div>
-                  <p className="text-gray-600 leading-relaxed text-lg mb-6">
-                    Between 2010 and 2011, Duria was the first to enter Mainland
-                    China's market in large volumes after Premier Wen Jiabao
-                    advocated for durian trade.
-                  </p>
-                  <p className="text-gray-600 leading-relaxed text-lg">
-                    From 2012 onwards, the company expanded domestically and
-                    internationally, supplying Malaysian supermarkets and
-                    exporting to China, Singapore, Australia, New Zealand, the
-                    UK, and the US, continuously strengthening Malaysia's durian
-                    industry.
-                  </p>
+                {/* Bottom Image Gallery */}
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="relative group overflow-hidden rounded-2xl">
+                    <Image
+                      src="/about/about_3.jpg"
+                      alt="Food processing facility with conveyor belt system"
+                      width={600}
+                      height={400}
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-sm font-medium">Processing Excellence</p>
+                    </div>
+                  </div>
+                  
+                  <div className="relative group overflow-hidden rounded-2xl">
+                    <Image
+                      src="/about/about_4.jpg"
+                      alt="Workers operating industrial food processing equipment"
+                      width={600}
+                      height={400}
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-sm font-medium">Innovation Hub</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -398,12 +460,12 @@ export default function About() {
       {/* MILESTONE TIMELINE SECTION ----------------------------------------------------------------------------- */}
       <section className="py-24 bg-gradient-to-br from-primary/5 to-primary/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div 
+          <div
             ref={headerFadeUp.elementRef}
             className={`text-center mb-16 transition-all duration-1000 ease-out ${
-              headerFadeUp.isVisible 
-                ? 'opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-8'
+              headerFadeUp.isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
             }`}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
@@ -426,12 +488,12 @@ export default function About() {
             {/* Timeline Items */}
             <div className="space-y-12">
               {/* 2008-2009 */}
-              <div 
+              <div
                 ref={timelineItem1.elementRef}
                 className={`relative flex flex-col md:flex-row items-center transition-all duration-1000 ease-out ${
-                  timelineItem1.isVisible 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-8'
+                  timelineItem1.isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
                 }`}
               >
                 {/* Desktop Timeline Dot */}
@@ -469,12 +531,12 @@ export default function About() {
               </div>
 
               {/* 2012 */}
-              <div 
+              <div
                 ref={timelineItem2.elementRef}
                 className={`relative flex flex-col md:flex-row items-center transition-all duration-1000 ease-out ${
-                  timelineItem2.isVisible 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-8'
+                  timelineItem2.isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
                 }`}
               >
                 {/* Desktop Timeline Dot */}
@@ -512,12 +574,12 @@ export default function About() {
               </div>
 
               {/* 2015 */}
-              <div 
+              <div
                 ref={timelineItem3.elementRef}
                 className={`relative flex flex-col md:flex-row items-center transition-all duration-1000 ease-out ${
-                  timelineItem3.isVisible 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-8'
+                  timelineItem3.isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
                 }`}
               >
                 {/* Desktop Timeline Dot */}
@@ -556,12 +618,12 @@ export default function About() {
               </div>
 
               {/* 2018 */}
-              <div 
+              <div
                 ref={timelineItem4.elementRef}
                 className={`relative flex flex-col md:flex-row items-center transition-all duration-1000 ease-out ${
-                  timelineItem4.isVisible 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-8'
+                  timelineItem4.isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
                 }`}
               >
                 {/* Desktop Timeline Dot */}
@@ -599,12 +661,12 @@ export default function About() {
               </div>
 
               {/* 2022 */}
-              <div 
+              <div
                 ref={timelineItem5.elementRef}
                 className={`relative flex flex-col md:flex-row items-center transition-all duration-1000 ease-out ${
-                  timelineItem5.isVisible 
-                    ? 'opacity-100 translate-y-0' 
-                    : 'opacity-0 translate-y-8'
+                  timelineItem5.isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
                 }`}
               >
                 {/* Desktop Timeline Dot */}

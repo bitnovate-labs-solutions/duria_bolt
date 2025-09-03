@@ -35,7 +35,7 @@ export default function ContactForm() {
   return (
     <Card className="max-w-2xl mx-auto rounded-2xl shadow-2xl border-0 bg-white/90 backdrop-blur-sm">
       <CardHeader className="pb-6">
-        <CardTitle className="text-2xl font-bold text-black">Get in Touch</CardTitle>
+        <CardTitle className="text-2xl font-bold text-black">Send us a Message</CardTitle>
       </CardHeader>
       <CardContent>
         {isSubmitted ? (

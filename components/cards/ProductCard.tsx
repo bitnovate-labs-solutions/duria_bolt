@@ -65,9 +65,10 @@ export default function ProductCard({
               ))}
           </ul>
         ) : (
-          <p className="text-gray-500 text-base md:text-lg mb-6 line-clamp-3 leading-relaxed flex-1">
-            {description}
-          </p>
+          <div 
+            className="text-gray-500 text-base md:text-lg mb-6 leading-relaxed flex-1"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         )}
         {price && (
           <p className="font-bold text-xl md:text-2xl text-primary mt-auto">

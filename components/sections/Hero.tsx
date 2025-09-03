@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 // Assets
-import HeroImage from "@/public/mochi/mochi-set-optimized.jpg";
+import HeroImage from "@/public/mooncake/mooncake_1.jpg";
 import Duria from "@/public/duria-logo-white.png";
 
 export default function Hero() {

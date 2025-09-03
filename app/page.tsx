@@ -15,7 +15,7 @@ import {
   Quote,
   CheckCircle,
   Award,
-  TrendingUp,
+  Handshake,
 } from "lucide-react";
 import Link from "next/link";
 import TemporaryLanding from "@/components/TemporaryLanding";
@@ -88,7 +88,7 @@ const features = [
       "Enjoy fast, reliable delivery worldwide with temperature-controlled logistics for freshness guaranteed",
   },
   {
-    icon: TrendingUp,
+    icon: Handshake,
     title: "Expertise You Can Trust",
     description:
       "With decades of experience, we bring you authentic durian products backed by deep knowledge and exceptional service",
@@ -267,7 +267,7 @@ export default function Home() {
               "Musang King Durian Snowy Skin",
               "Frozen Durian Pulp",
               "Frozen Durian Whole Fruit",
-              "Musang King Durian Paste",
+              // "Musang King Durian Paste",
             ].map((productName, index) => (
               <CarouselCard
                 key={index}

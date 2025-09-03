@@ -28,6 +28,10 @@ export default function Footer() {
             </p> */}
             <div className="text-sm text-gray-400">
               <p className="mb-1">Duria Manufacturing Sdn. Bhd.</p>
+              <p className="mb-1">Lot 5933A, Jalan Perusahaan 1,</p>
+              <p className="mb-1">Kamunting Industrial Area,</p>
+              <p className="mb-1">34600 Kamunting Perak.</p>
+              <br />
               <p className="mb-1">Registration No: 201201025937</p>
             </div>
           </div>
@@ -52,14 +56,14 @@ export default function Footer() {
                   Products
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/where-to-buy"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Where to Buy
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/contact"
@@ -116,27 +120,29 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex space-x-6 mb-4 md:mb-0">
+              {/* FACEBOOK ================= */}
               <a
-                href="#"
+                href="https://www.facebook.com/duriamalaysiaofficial"
                 className="text-gray-400 hover:text-primary transition-colors"
               >
                 <Facebook className="w-5 h-5" />
                 <span className="sr-only">Facebook</span>
               </a>
+              {/* INSTAGRAM ================= */}
               <a
-                href="#"
+                href="https://www.instagram.com/duriamalaysiaofficial"
                 className="text-gray-400 hover:text-primary transition-colors"
               >
                 <Instagram className="w-5 h-5" />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="text-gray-400 hover:text-primary transition-colors"
               >
                 <MessageCircle className="w-5 h-5" />
                 <span className="sr-only">TikTok</span>
-              </a>
+              </a> */}
               {/* <a
                 href="#"
                 className="text-gray-400 hover:text-primary transition-colors"
@@ -149,7 +155,7 @@ export default function Footer() {
             </div>
             <div className="text-sm text-gray-400">
               <p>Wechat: duriaofficial</p>
-              <p>Phone: +6011 1091 4393</p>
+              {/* <p>Phone: +6011 1091 4393</p> */}
             </div>
           </div>
           <div className="text-center text-sm text-gray-500 mt-4 pt-4 border-t border-gray-800">

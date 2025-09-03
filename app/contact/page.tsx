@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen">
+    <div>
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-primary/5 to-primary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,13 +26,13 @@ export default function Contact() {
             </div>
 
             {/* Contact Information */}
-            <div className="space-y-8">
-              <Card className="rounded-2xl shadow-lg border-0">
-                <CardContent className="p-8">
+            <div className="space-y-8 h-full">
+              <Card className="rounded-2xl shadow-lg border-0 h-full">
+                <CardContent className="p-8 h-full flex flex-col">
                   <h3 className="font-bold text-xl mb-6 text-black">
                     Get in Touch
                   </h3>
-                  <div className="space-y-6">
+                  <div className="space-y-6 flex-1">
                     <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
                         <Mail className="w-6 h-6 text-black" />
@@ -51,22 +51,7 @@ export default function Contact() {
                         <p className="text-gray-600">+6011-1091 4393</p>
                       </div>
                     </div>
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-                        <MapPin className="w-6 h-6 text-black" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-black">Address</p>
-                        <p className="text-gray-600">
-                          Lot 5933A, Jalan Perusahaan 1,
-                          <br />
-                          Kamunting Industrial Area,
-                          <br />
-                          34600 Kamuting Perak.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-center space-x-4">
+                    {/* <div className="flex items-center space-x-4">
                       <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
                         <Clock className="w-6 h-6 text-black" />
                       </div>
@@ -82,12 +67,12 @@ export default function Contact() {
                           Sunday: Closed
                         </p>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="rounded-2xl shadow-lg border-0">
+              {/* <Card className="rounded-2xl shadow-lg border-0">
                 <CardContent className="p-8">
                   <h3 className="font-bold text-xl mb-6 text-black">
                     Quick Responses
@@ -119,7 +104,7 @@ export default function Contact() {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
+              </Card> */}
 
               {/* REMOVAL BASED ON SITEMAP REQUIREMENTS ----------------------------------------------- */}
               {/* <Card className="rounded-2xl shadow-lg border-0">

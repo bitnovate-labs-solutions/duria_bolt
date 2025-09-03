@@ -4,31 +4,13 @@ import ProductCarousel from "@/components/cards/ProductCarousel";
 const iceCreamSeries = [
   {
     id: "durian-ice-cream",
-    title: "Musang King Durian Ice Cream (3 pieces per box)",
+    title: "Musang King Durian Ice Cream",
     image: "/ice_cream/durian_icecream.png",
     // description: "Artisanal ice cream made with authentic durian pulp.",
     description:
-      "* 50% durian flesh * 70g x 3 pieces / box * 20 boxes / carton ",
+      "<b>Packaging Options:</b> <br/> 50% durian flesh 70g x 3 pieces / box 20 boxes / carton <br/> 50% durian flesh 80ml / tub <br/> 50% durian flesh 50g / piece",
     category: "Ice Cream Series",
     // price: "From RM18/tub",
-  },
-  {
-    id: "durian-ice-cream",
-    title: "Musang King Durian Ice Cream",
-    image: "/ice_cream/durian_icecream.png",
-    description: "* 50% durian flesh * 80ml / tub",
-    category: "Ice Cream Series",
-    // description: "Refreshing sorbet with pure durian flavor.",
-    // price: "From RM15/tub",
-  },
-  {
-    id: "durian-ice-cream",
-    title: "Musang King Durian Ice Cream (Single Stick)",
-    image: "/ice_cream/durian_icecream.png",
-    description: "* 50% durian flesh * 50g / piece",
-    category: "Ice Cream Series",
-    // description: "Italian-style gelato with rich durian cream.",
-    // price: "From RM22/tub",
   },
   {
     id: "durian-ice-cream",
@@ -54,7 +36,7 @@ const mooncakes = [
   },
   {
     id: "premium-mooncake-box",
-    title: "Black Thorn Musang King Snow Skin Mooncake",
+    title: "Blackthorn Musang King Snow Skin Mooncake",
     image: "/mooncake/blackthorn1.jpg",
     description: "* 60g x 6pcs / box * 2 pcs packaging * 15 boxes / carton",
     category: "Mooncakes",
@@ -264,7 +246,7 @@ export default function Shop() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="min-h-[45vh] flex items-center justify-center bg-primary">
+      <section className="py-24 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -324,22 +306,22 @@ export default function Shop() {
       />
 
       {/* Cake Section */}
-      <ProductCarousel
+      {/* <ProductCarousel
         products={cakes}
         title="Cake"
         description=""
         // description="Delicious durian cakes and cheesecakes, perfect for celebrations and special occasions."
         className="bg-white"
-      />
+      /> */}
 
       {/* Spring Rolls Section */}
-      <ProductCarousel
+      {/* <ProductCarousel
         products={springRolls}
         title="Spring Rolls"
         description=""
         // description="Crispy spring rolls filled with sweet durian, available fresh or frozen for convenience."
         className="bg-green-50"
-      />
+      /> */}
 
       {/* Frozen Durian Pulp Section */}
       <ProductCarousel
@@ -351,13 +333,13 @@ export default function Shop() {
       />
 
       {/* Musang King Durian Paste Section */}
-      <ProductCarousel
+      {/* <ProductCarousel
         products={musangKingPaste}
         title="Musang King Durian Paste"
         description=""
         // description="Concentrated durian paste with intense flavor, ideal for mooncakes, desserts, and culinary creations."
         className="bg-green-50"
-      />
+      /> */}
     </div>
   );
 }
