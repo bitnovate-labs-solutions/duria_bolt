@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Instagram, MessageCircle } from "lucide-react";
 
 export default function Footer() {
@@ -12,20 +13,22 @@ export default function Footer() {
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
-              <img
+              <Image
                 src="/duria-logo-gold.png"
                 alt="Duria"
+                width={48}
+                height={48}
                 className="h-12 w-auto"
               />
             </div>
-            <p className="text-gray-400 mb-4 max-w-md">
+            {/* <p className="text-gray-400 mb-4 max-w-md">
               Premium durian export company bringing the finest quality durians
               from Southeast Asia to the world. Established with passion for
               sharing the king of fruits globally.
-            </p>
+            </p> */}
             <div className="text-sm text-gray-400">
-              <p className="mb-1">Duria Malaysia Sdn. Bhd.</p>
-              <p className="mb-1">Registration No: 1463077-K</p>
+              <p className="mb-1">Duria Manufacturing Sdn. Bhd.</p>
+              <p className="mb-1">Registration No: 201201025937</p>
             </div>
           </div>
 
@@ -80,7 +83,8 @@ export default function Footer() {
                   Privacy Policy
                 </Link>
               </li>
-              <li>
+              {/* TEMPORARILY HIDDEN FOR FUTURE IMPLEMENTATION ==================================== */}
+              {/* <li>
                 <Link
                   href="/legal/terms"
                   className="text-gray-400 hover:text-white transition-colors"
@@ -103,7 +107,7 @@ export default function Footer() {
                 >
                   FAQ
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

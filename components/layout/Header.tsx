@@ -25,7 +25,7 @@ export default function Header() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Products", href: "/products" },
-    { name: "Where to Buy", href: "/where-to-buy" },
+    // { name: "Where to Buy", href: "/where-to-buy" },
     { name: "Contact", href: "/contact" },
   ];
 

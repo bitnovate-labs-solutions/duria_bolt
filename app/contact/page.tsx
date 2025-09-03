@@ -1,6 +1,6 @@
-import ContactForm from '@/components/forms/ContactForm';
-import { Card, CardContent } from '@/components/ui/card';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import ContactForm from "@/components/forms/ContactForm";
+import { Card, CardContent } from "@/components/ui/card";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -14,8 +14,8 @@ export default function Contact() {
               Contact Us
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Have questions about our products or need assistance with your order? 
-              We're here to help and would love to hear from you.
+              Have questions about our products or need assistance with your
+              order? We're here to help and would love to hear from you.
             </p>
           </div>
 
@@ -27,78 +27,102 @@ export default function Contact() {
 
             {/* Contact Information */}
             <div className="space-y-8">
-            <Card className="rounded-2xl shadow-lg border-0">
-              <CardContent className="p-8">
-                <h3 className="font-bold text-xl mb-6 text-black">Get in Touch</h3>
-                <div className="space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-black" />
+              <Card className="rounded-2xl shadow-lg border-0">
+                <CardContent className="p-8">
+                  <h3 className="font-bold text-xl mb-6 text-black">
+                    Get in Touch
+                  </h3>
+                  <div className="space-y-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                        <Mail className="w-6 h-6 text-black" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-black">Email</p>
+                        <p className="text-gray-600">contact@duria.com.my</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="font-semibold text-black">Email</p>
-                      <p className="text-gray-600">hello@durianexport.com</p>
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                        <Phone className="w-6 h-6 text-black" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-black">Phone</p>
+                        <p className="text-gray-600">+6011-1091 4393</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                        <MapPin className="w-6 h-6 text-black" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-black">Address</p>
+                        <p className="text-gray-600">
+                          Lot 5933A, Jalan Perusahaan 1,
+                          <br />
+                          Kamunting Industrial Area,
+                          <br />
+                          34600 Kamuting Perak.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                        <Clock className="w-6 h-6 text-black" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-black">
+                          Business Hours
+                        </p>
+                        <p className="text-gray-600">
+                          Monday - Friday: 9:00 AM - 6:00 PM
+                          <br />
+                          Saturday: 9:00 AM - 2:00 PM
+                          <br />
+                          Sunday: Closed
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-                      <Phone className="w-6 h-6 text-black" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-black">Phone</p>
-                      <p className="text-gray-600">+65 9123 4567</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-                      <MapPin className="w-6 h-6 text-black" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-black">Address</p>
-                      <p className="text-gray-600">
-                        123 Export Hub Street<br />
-                        Singapore 123456
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-                      <Clock className="w-6 h-6 text-black" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-black">Business Hours</p>
-                      <p className="text-gray-600">
-                        Monday - Friday: 9:00 AM - 6:00 PM<br />
-                        Saturday: 9:00 AM - 2:00 PM<br />
-                        Sunday: Closed
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
 
-            <Card className="rounded-2xl shadow-lg border-0">
-              <CardContent className="p-8">
-                <h3 className="font-bold text-xl mb-6 text-black">Quick Responses</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600 font-medium">General Inquiries</span>
-                    <span className="font-semibold text-green-600">Within 24 hours</span>
+              <Card className="rounded-2xl shadow-lg border-0">
+                <CardContent className="p-8">
+                  <h3 className="font-bold text-xl mb-6 text-black">
+                    Quick Responses
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600 font-medium">
+                        General Inquiries
+                      </span>
+                      <span className="font-semibold text-green-600">
+                        Within 24 hours
+                      </span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600 font-medium">
+                        Order Support
+                      </span>
+                      <span className="font-semibold text-green-600">
+                        Within 4 hours
+                      </span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600 font-medium">
+                        Urgent Matters
+                      </span>
+                      <span className="font-semibold text-green-600">
+                        Within 1 hour
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600 font-medium">Order Support</span>
-                    <span className="font-semibold text-green-600">Within 4 hours</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600 font-medium">Urgent Matters</span>
-                    <span className="font-semibold text-green-600">Within 1 hour</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
 
-            <Card className="rounded-2xl shadow-lg border-0">
+              {/* REMOVAL BASED ON SITEMAP REQUIREMENTS ----------------------------------------------- */}
+              {/* <Card className="rounded-2xl shadow-lg border-0">
               <CardContent className="p-8">
                 <h3 className="font-bold text-xl mb-6 text-black">For Businesses</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
@@ -120,8 +144,8 @@ export default function Contact() {
                   </div>
                 </div>
               </CardContent>
-            </Card>
-          </div>
+            </Card> */}
+            </div>
           </div>
         </div>
       </section>
