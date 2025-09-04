@@ -130,7 +130,7 @@ export default function CarouselCard({
     }
 
     // Use local snowy skin images for Musang King Durian Snowy Skin
-    if (product.toLowerCase().includes("musang king durian snowy skin")) {
+    if (product.toLowerCase().includes("mini musang king snowy skin")) {
       return [
         {
           src: "/snowy_skin/msk_snowy_skin_1.jpg",

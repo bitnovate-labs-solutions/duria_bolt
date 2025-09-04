@@ -159,8 +159,8 @@ export default function Footer() {
             </div>
           </div>
           <div className="text-center text-sm text-gray-500 mt-4 pt-4 border-t border-gray-800">
-            © {year} Duria Malaysia Sdn. Bhd. (1463077-K) & Duria Manufacturing
-            Sdn. Bhd. (1010427-T) All rights reserved.
+            © {year} Duria Manufacturing Sdn. Bhd. (1010427-T) All rights
+            reserved.
           </div>
         </div>
       </div>

@@ -109,18 +109,24 @@ const timelineData = [
   {
     year: "2008-2011",
     title: "Market Expansion",
+    image: "/about/about_2.jpg",
+    imageAlt: "Modern food processing facility with Multivac equipment",
     content:
       "Since 2008, Duria doubled exports to Singapore and entered the Hong Kong market in 2009, significantly boosting Musang King's popularity. Between 2010 and 2011, Duria became the first company to export durian to Mainland China in large volumes following Premier Wen Jiabao's endorsement.",
   },
   {
     year: "2012-2015",
     title: "Global Reach",
+    image: "/about/about_3.jpg",
+    imageAlt: "Food processing facility with conveyor belt system",
     content:
       "The company expanded its reach, supplying Malaysian supermarkets and exporting to China, Singapore, Australia, New Zealand, the UK, and the US. This period significantly strengthened Malaysia's durian industry.",
   },
   {
     year: "2016-2017",
     title: "Innovation & Growth",
+    image: "/about/about_4.jpg",
+    imageAlt: "Workers operating industrial food processing equipment",
     content:
       "In 2016, Duria was chosen as an Entry Point Project (EPP) under the Northern Corridor Economic Region (NCER) with Perak government support under the Northern Corridor Economic Region (NCER) with Perak government support to further develop the durian sector. With AgroBank support, Duria built Malaysia's first durian pilot project featuring advanced High Pressure Processing (HPP) and Nitrogen Freezing Tunnel technologies. Consequently, the factory was relocated to Kamunting, Perak. In 2017, Duria established a primary processing factory in Pengkalan Hulu through a joint venture with smallholders and collectors. This initiative boosted local economies in Greater Kamunting and Pengkalan Hulu, created jobs, and included CSR programs to support smallholder farmers. It enhanced income for farmers in Pengkalan Hulu, Batu Kurau, and Greater Kamunting, contributing to sustainable rural development.",
   },
@@ -149,9 +155,9 @@ export default function About() {
               About Duria
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              We are passionate about bringing the world's finest durians from
-              Southeast Asia to your table, combining traditional expertise with
-              modern export excellence.
+              We are passionate about bringing the world's finest durian
+              products from Southeast Asia to your table, combining traditional
+              expertise with modern export excellence.
             </p>
           </div>
 
@@ -260,17 +266,18 @@ export default function About() {
             <div className="lg:col-span-2">
               <div className="bg-white p-2 pt-0 lg:p-8 lg:pt-0 rounded-2xl">
                 {/* Image - Only show if image exists */}
-                {timelineData[activeYear].image && timelineData[activeYear].imageAlt && (
-                  <div className="relative mb-8">
-                    <Image
-                      src={timelineData[activeYear].image!}
-                      alt={timelineData[activeYear].imageAlt!}
-                      width={800}
-                      height={500}
-                      className="w-full h-96 object-cover rounded-2xl"
-                    />
-                  </div>
-                )}
+                {timelineData[activeYear].image &&
+                  timelineData[activeYear].imageAlt && (
+                    <div className="relative mb-8">
+                      <Image
+                        src={timelineData[activeYear].image!}
+                        alt={timelineData[activeYear].imageAlt!}
+                        width={800}
+                        height={500}
+                        className="w-full h-96 object-cover rounded-2xl"
+                      />
+                    </div>
+                  )}
 
                 {/* Content */}
                 <div>
@@ -288,107 +295,116 @@ export default function About() {
       </section>
 
       {/* FOUNDER'S STORY SECTION ----------------------------------------------------------------------------- */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-primary rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
               Founder's Story
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Meet Wong Woei Ming, the visionary behind Malaysia's durian
-              revolution
-            </p>
           </div>
 
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
-              {/* Header with large image */}
-              <div className="relative h-64 md:h-80">
-                <Image
-                  src="/about/about_2.jpg"
-                  alt="Modern food processing facility with Multivac equipment"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            {/* Left Column - Founder Image */}
+            <div className="lg:col-span-5">
+              <div className="relative group">
+                {/* Main Image */}
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                  <Image
+                    src="/founder_pic.JPG"
+                    alt="Wong Woei Ming, Founder of Duria"
+                    width={600}
+                    height={800}
+                    className="w-full h-[600px] object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
 
-              {/* Content Grid */}
-              <div className="p-8 lg:p-12">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                  {/* Left Column - Text Content */}
-                  <div className="space-y-6">
-                    <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl">
-                      <h4 className="text-xl font-semibold text-black mb-4">The Beginning</h4>
-                      <p className="text-gray-600 leading-relaxed">
-                        Founded in 2005 by Wong Woei Ming with support from
-                        Malaysia's Ministry of Agriculture, Duria established the
-                        country's first durian collection factory.
-                      </p>
-                    </div>
-
-                    <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl">
-                      <h4 className="text-xl font-semibold text-black mb-4">International Expansion</h4>
-                      <p className="text-gray-600 leading-relaxed">
-                        Since 2008, it doubled processed durian exports to Singapore
-                        and pioneered Malaysian durian entry into Hong Kong in 2009,
-                        boosting Musang King's popularity.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Right Column - Text Content */}
-                  <div className="space-y-6">
-                    <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl">
-                      <h4 className="text-xl font-semibold text-black mb-4">China Market Entry</h4>
-                      <p className="text-gray-600 leading-relaxed">
-                        Between 2010 and 2011, Duria was the first to enter Mainland
-                        China's market in large volumes after Premier Wen Jiabao
-                        advocated for durian trade.
-                      </p>
-                    </div>
-
-                    <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-6 rounded-2xl">
-                      <h4 className="text-xl font-semibold text-black mb-4">Global Growth</h4>
-                      <p className="text-gray-600 leading-relaxed">
-                        From 2012 onwards, the company expanded domestically and
-                        internationally, supplying Malaysian supermarkets and
-                        exporting to China, Singapore, Australia, New Zealand, the
-                        UK, and the US, continuously strengthening Malaysia's durian
-                        industry.
-                      </p>
+                  {/* Floating badge */}
+                  <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg">
+                    <div className="text-sm text-gray-500">Founder</div>
+                    <div className="text-lg font-bold text-black">
+                      Wong Woei Ming
                     </div>
                   </div>
                 </div>
 
-                {/* Bottom Image Gallery */}
-                <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="relative group overflow-hidden rounded-2xl">
-                    <Image
-                      src="/about/about_3.jpg"
-                      alt="Food processing facility with conveyor belt system"
-                      width={600}
-                      height={400}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-sm font-medium">Processing Excellence</p>
+                {/* Decorative elements */}
+                {/* <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary rounded-full opacity-20"></div>
+                <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-primary rounded-full opacity-20"></div> */}
+              </div>
+            </div>
+
+            {/* Right Column - Content */}
+            <div className="lg:col-span-7">
+              <div className="h-[600px] flex flex-col justify-start overflow-y-auto">
+                {/* Original Content Grid */}
+                <div className="space-y-4">
+                  <div className="group relative overflow-hidden bg-gradient-to-br from-white via-white to-gray-50/50 rounded-3xl p-6 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.08)] border border-white/60 hover:shadow-[0_8px_25px_-4px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-2">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="relative z-10">
+                      <h4 className="text-xl font-bold text-black mb-3 group-hover:text-primary transition-colors duration-300">
+                        The Beginning
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed text-lg">
+                        Founded in 2005 by Wong Woei Ming with support from
+                        Malaysia's Ministry of Agriculture, Duria established
+                        the country's first durian collection factory.
+                      </p>
                     </div>
+                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
-                  
-                  <div className="relative group overflow-hidden rounded-2xl">
-                    <Image
-                      src="/about/about_4.jpg"
-                      alt="Workers operating industrial food processing equipment"
-                      width={600}
-                      height={400}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-sm font-medium">Innovation Hub</p>
+
+                  <div className="group relative overflow-hidden bg-gradient-to-br from-white via-white to-gray-50/50 rounded-3xl p-6 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.08)] border border-white/60 hover:shadow-[0_8px_25px_-4px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-2">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="relative z-10">
+                      <h4 className="text-xl font-bold text-black mb-3 group-hover:text-primary transition-colors duration-300">
+                        International Expansion
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed text-lg">
+                        Since 2008, it doubled processed durian exports to
+                        Singapore and pioneered Malaysian durian entry into Hong
+                        Kong in 2009, boosting Musang King's popularity.
+                      </p>
                     </div>
+                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+
+                  <div className="group relative overflow-hidden bg-gradient-to-br from-white via-white to-gray-50/50 rounded-3xl p-6 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.08)] border border-white/60 hover:shadow-[0_8px_25px_-4px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-2">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="relative z-10">
+                      <h4 className="text-xl font-bold text-black mb-3 group-hover:text-primary transition-colors duration-300">
+                        China Market Entry
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed text-lg">
+                        Between 2010 and 2011, Duria was the first to enter
+                        Mainland China's market in large volumes after Premier
+                        Wen Jiabao advocated for durian trade.
+                      </p>
+                    </div>
+                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+
+                  <div className="group relative overflow-hidden bg-gradient-to-br from-white via-white to-gray-50/50 rounded-3xl p-6 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.08)] border border-white/60 hover:shadow-[0_8px_25px_-4px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-2">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="relative z-10">
+                      <h4 className="text-xl font-bold text-black mb-3 group-hover:text-primary transition-colors duration-300">
+                        Global Growth
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed text-lg">
+                        From 2012 onwards, the company expanded domestically and
+                        internationally, supplying Malaysian supermarkets and
+                        exporting to China, Singapore, Australia, New Zealand,
+                        the UK, and the US, continuously strengthening
+                        Malaysia's durian industry.
+                      </p>
+                    </div>
+                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
                 </div>
               </div>
@@ -427,8 +443,8 @@ export default function About() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Explore our worldwide network of business locations and
-              distribution centers that bring premium durians to customers
-              across the globe.
+              distribution centers that bring premium durian products to
+              customers across the globe.
             </p>
           </div>
 

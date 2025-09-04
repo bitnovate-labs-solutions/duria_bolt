@@ -261,10 +261,10 @@ export default function Home() {
             {[
               "3D Musang King Durian Ice Cream",
               "Musang King Durian Snowy Mooncake",
-              "Premium Durian Mooncake",
-              "Twister Blackthorn Durian Snowy Mooncake",
+              // "Premium Durian Mooncake",
+              // "Twister Blackthorn Durian Snowy Mooncake",
               "Durian Mochi Series",
-              "Musang King Durian Snowy Skin",
+              "Mini Musang King Snowy Skin",
               "Frozen Durian Pulp",
               "Frozen Durian Whole Fruit",
               // "Musang King Durian Paste",

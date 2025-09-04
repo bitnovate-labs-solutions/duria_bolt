@@ -72,7 +72,7 @@ export default function Hero() {
           <div className="w-16 md:w-32 h-[1px] border border-yellow-400"></div>
           <h1 className="text-base md:text-lg lg:text-xl font-light leading-tight px-4 md:px-8 text-center">
             <span className="text-primary">
-              Delivering High-Quality Products for Export
+              Delivering High-Quality Durian Products for Export
             </span>
           </h1>
           <div className="w-16 md:w-32 h-[1px] border border-yellow-400"></div>

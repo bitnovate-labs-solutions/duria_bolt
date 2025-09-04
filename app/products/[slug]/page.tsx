@@ -145,7 +145,7 @@ const productData: { [key: string]: any } = {
   },
   "durian-ice-cream": {
     title: "Premium Durian Ice Cream",
-    category: "Ice Cream Series",
+    category: "Ice Cream",
     price: "From RM18/tub",
     images: [
       "https://images.pexels.com/photos/1352278/pexels-photo-1352278.jpeg",
@@ -190,7 +190,7 @@ const productData: { [key: string]: any } = {
   },
   // "durian-sorbet": {
   //   title: "Durian Sorbet",
-  //   category: "Ice Cream Series",
+  //   category: "Ice Cream",
   //   price: "From RM15/tub",
   //   images: [
   //     "https://images.pexels.com/photos/1352280/pexels-photo-1352280.jpeg",
@@ -235,7 +235,7 @@ const productData: { [key: string]: any } = {
   // },
   // "durian-gelato": {
   //   title: "Durian Gelato",
-  //   category: "Ice Cream Series",
+  //   category: "Ice Cream",
   //   price: "From RM22/tub",
   //   images: [
   //     "https://images.pexels.com/photos/1352281/pexels-photo-1352281.jpeg",
@@ -557,7 +557,7 @@ export async function generateStaticParams() {
     "musang-king-whole",
     "d24-whole",
     "tekka-whole",
-    // Ice Cream Series
+    // Ice Cream
     "durian-ice-cream",
     // "durian-sorbet", ************
     // 'durian-gelato', ************

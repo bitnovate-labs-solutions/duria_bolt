@@ -4,20 +4,31 @@ import ProductCarousel from "@/components/cards/ProductCarousel";
 const iceCreamSeries = [
   {
     id: "durian-ice-cream",
-    title: "Musang King Durian Ice Cream",
+    title: "Mini 3D Musang King Durian Ice Cream",
     image: "/ice_cream/durian_icecream.png",
-    // description: "Artisanal ice cream made with authentic durian pulp.",
     description:
-      "<b>Packaging Options:</b> <br/> 50% durian flesh 70g x 3 pieces / box 20 boxes / carton <br/> 50% durian flesh 80ml / tub <br/> 50% durian flesh 50g / piece",
-    category: "Ice Cream Series",
+      "* Taste like real durian, with 50% durian flesh * 50g per piece",
+    category: "Ice Cream",
+    // description: "Artisanal ice cream made with authentic durian pulp.",
     // price: "From RM18/tub",
   },
   {
     id: "durian-ice-cream",
-    title: "Duria White Coffee Ice Cream",
+    title: "3D Musang King Durian Ice Cream",
+    image: "/ice_cream/3D_MSK_Icecream.jpg",
+    description:
+      "* Taste like real durian, with 50% durian flesh * 70g per piece",
+    category: "Ice Cream",
+    // description: "Artisanal ice cream made with authentic durian pulp.",
+    // price: "From RM18/tub",
+  },
+  {
+    id: "durian-ice-cream",
+    title: "White Coffee Ice Cream",
     image: "/ice_cream/duria_icecream_coffee.png",
-    description: "* 50% durian flesh * 50g / piece",
-    category: "Ice Cream Series",
+    description:
+      "* Savour the famous Ipoh White Coffee in a cool and silky texture * 70g per piece",
+    category: "Ice Cream",
     // description: "Italian-style gelato with rich durian cream.",
     // price: "From RM22/tub",
   },
@@ -27,31 +38,43 @@ const iceCreamSeries = [
 const mooncakes = [
   {
     id: "premium-mooncake-box",
-    title: "Musang King Snow Skin Mooncake (Premium)",
-    image: "/mooncake/mooncake_1.jpg",
-    description: "",
+    title: "Signature Musang King Durian Snowy Mooncake",
+    image: "/snowy_mooncake/msk_snowy_mooncake.jpg",
+    description:
+      "* The best-selling classic durian mooncake, packed with pure Musang King Durian flesh and wrapped with a delicious soft snow skin * Comes with 6 pieces (60g) in an elegant gift tin box",
     category: "Mooncakes",
     // description: "Elegant box containing 6 premium durian mooncakes.",
     // price: "From RM128/box",
   },
   {
     id: "premium-mooncake-box",
-    title: "Blackthorn Musang King Snow Skin Mooncake",
-    image: "/mooncake/blackthorn1.jpg",
-    description: "* 60g x 6pcs / box * 2 pcs packaging * 15 boxes / carton",
+    title: "Blackthorn 'Twister' Durian Snowy Mooncake",
+    image: "/twister_blackthorn/twister_2.jpg",
+    description:
+      "* The latest mooncake creation from Duria, filled with Blackthorn durian flesh and wrapped in a two-tone snow skin * Comes with 6 pieces (60g) in a luxurious golden gift tin box",
     category: "Mooncakes",
     // description: "Elegant box containing 6 premium durian mooncakes.",
     // price: "From RM128/box",
   },
   {
-    id: "durian-mooncake-single",
-    title: "Musang King Snowskin Mooncake (Bamboo Charcoal / Crystal)",
-    image: "/snowy_mooncake/msk_snowy_mooncake.jpg",
-    description: "",
+    id: "premium-mooncake-box",
+    title: "Premium Mooncake",
+    image: "/mooncake/mooncake_1.jpg",
+    description:
+      "* The most luxurious mooncake gift set, featuring a large Signature Musang King mooncake surrounded by seven durian mooncake of assorted snow skin flavours * Comes with 8 pieces (160g and 60g) in a stunning purple octagonal gift tin box",
     category: "Mooncakes",
-    // description: "Individual durian mooncake with authentic filling.",
-    // price: "From RM12/piece",
+    // description: "Elegant box containing 6 premium durian mooncakes.",
+    // price: "From RM128/box",
   },
+  // {
+  //   id: "durian-mooncake-single",
+  //   title: "Musang King Snowskin Mooncake (Bamboo Charcoal / Crystal)",
+  //   image: "/snowy_mooncake/msk_snowy_mooncake.jpg",
+  //   description: "",
+  //   category: "Mooncakes",
+  //   // description: "Individual durian mooncake with authentic filling.",
+  //   // price: "From RM12/piece",
+  // },
   // {
   //   id: "mooncake-gift-set",
   //   title: "",
@@ -70,9 +93,10 @@ const mochi = [
     id: "durian-mochi",
     title: "Musang King Mochi",
     image: "/mochi/mochi-set-optimized.jpg",
-    description: "",
-    // description: "Traditional Japanese mochi filled with premium durian cream.",
+    description:
+      "Assorted range of mochi, pure durian flesh wrapped with chewy Mochi skin. * Durian Mochi, Pandan Durian Mochi, Mango Durian Mochi * Non-durian flavours include Strawberry Cheese Mochi and Blueberry Cheese Mochi * Packing size 25g x 4 pieces per box",
     category: "Mochi",
+    // description: "Traditional Japanese mochi filled with premium durian cream.",
     // price: "From RM24/box",
   },
   // {
@@ -93,13 +117,28 @@ const mochi = [
   // },
 ];
 
+// MINI SNOWY SKIN DATA =================================================================
+const miniSnowySkin = [
+  {
+    id: "mini-musang-king-snowy-skin",
+    title: "Mini Musang King Snowy Skin",
+    image: "/snowy_skin/msk_snowy_skin_1.jpg",
+    description:
+      "Enjoy the Musang King snowy skin all year long with this bite-size offering. * Comes with 6 heart-shaped pieces (30g each)",
+    category: "Mini Snowy Skin",
+    // description: "Bite-size snowy skin treats perfect for any occasion.",
+    // price: "From RM35/box",
+  },
+];
+
 // WHOLE FRUITS DATA =================================================================
 const wholeFruits = [
   {
     id: "musang-king-whole",
-    title: "Musang King Whole Fruit",
+    title: "Frozen Durian Whole Fruit",
     image: "/whole_fruit/durian_whole_fruit.jpg",
-    description: "",
+    description:
+      "Popular varieties of frozen whole fruit for export markets include Musang King, Blackthorn, D101 and D24.",
     category: "Whole Fruits",
     // description:
     //   "Premium grade Musang King durian, hand-selected for perfect ripeness.",
@@ -178,33 +217,14 @@ const springRolls = [
 const frozenDurianPulp = [
   {
     id: "musang-king-pulp",
-    title: "D101 Durian Pulp",
+    title: "Frozen Durian Pulp",
     image: "/frozen_pulp/durian_pulp1.jpg",
-    description: "",
+    description:
+      "For convenience and ease of consuming, durian pulp is carefully extracted from the husk and packed using skinpack vacuum technology * Suitable for retail display shelves * Available in 300g and 400g packs",
     category: "Frozen Durian Pulp",
     // description:
     //   "* 100% pure Musang King durian, * Flash frozen for freshness, * 500g per pack",
     // price: "From RM45/pack",
-  },
-  {
-    id: "d24-pulp",
-    title: "Musang King Durian Pulp",
-    image: "/frozen_pulp/durian_pulp2.jpg",
-    description: "",
-    category: "Frozen Durian Pulp",
-    // description:
-    //   "* Premium D24 durian variety, * No additives or preservatives, * 1kg per pack",
-    // price: "From RM38/pack",
-  },
-  {
-    id: "mixed-pulp",
-    title: "D24 Durian Pulp",
-    image: "/frozen_pulp/durian_pulp3.jpg",
-    description: "",
-    category: "Frozen Durian Pulp",
-    // description:
-    //   "* Blend of premium durian varieties, * Perfect for cooking and baking, * 750g per pack",
-    // price: "From RM42/pack",
   },
 ];
 
@@ -269,10 +289,10 @@ export default function Shop() {
         </div>
       </section>
 
-      {/* Ice Cream Series Section */}
+      {/* Ice Cream Section */}
       <ProductCarousel
         products={iceCreamSeries}
-        title="Ice Cream Series"
+        title="Ice Cream"
         description=""
         // description="Artisanal ice cream creations made with authentic durian pulp for a creamy, indulgent experience."
         className="bg-white"
@@ -296,13 +316,22 @@ export default function Shop() {
         className="bg-white"
       />
 
+      {/* Mini Snowy Skin Section */}
+      <ProductCarousel
+        products={miniSnowySkin}
+        title="Mini Snowy Skin"
+        description=""
+        // description="Bite-size snowy skin treats perfect for any occasion."
+        className="bg-green-50"
+      />
+
       {/* Whole Fruits Section */}
       <ProductCarousel
         products={wholeFruits}
         title="Whole Fruits"
         description=""
         // description="Premium whole durian fruits, hand-selected for perfect ripeness and authentic flavor."
-        className="bg-green-50"
+        className="bg-white"
       />
 
       {/* Cake Section */}
@@ -329,7 +358,7 @@ export default function Shop() {
         title="Frozen Durian Pulp"
         description=""
         // description="Premium frozen durian pulp, perfect for cooking, baking, and creating authentic durian dishes."
-        className="bg-white"
+        className="bg-green-50"
       />
 
       {/* Musang King Durian Paste Section */}

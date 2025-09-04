@@ -78,27 +78,33 @@ export default function ProductCarousel({
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-4 md:left-8 h-12 w-12" />
-            <CarouselNext className="right-4 md:right-8 h-12 w-12" />
+            {products.length > 1 && (
+              <>
+                <CarouselPrevious className="left-4 md:left-8 h-12 w-12 hidden md:flex" />
+                <CarouselNext className="right-4 md:right-8 h-12 w-12 hidden md:flex" />
+              </>
+            )}
           </Carousel>
           
           {/* Pagination Dots */}
-          <div className="flex justify-center mt-8">
-            <div className="flex space-x-2">
-              {products.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => api?.scrollTo(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    current === index 
-                      ? 'bg-primary scale-110' 
-                      : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
+          {products.length > 1 && (
+            <div className="flex justify-center mt-8">
+              <div className="flex space-x-2">
+                {products.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => api?.scrollTo(index)}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                      current === index 
+                        ? 'bg-primary scale-110' 
+                        : 'bg-gray-300 hover:bg-gray-400'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

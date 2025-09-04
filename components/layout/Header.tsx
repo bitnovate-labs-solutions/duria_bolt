@@ -18,7 +18,7 @@ export default function Header() {
 
   const languages = [
     { code: "EN", name: "English", flag: "🇺🇸" },
-    { code: "中文", name: "中文", flag: "🇨🇳" },
+    // { code: "中文", name: "中文", flag: "🇨🇳" }, TEMPORARILY HIDDEN
   ];
 
   const navigation = [

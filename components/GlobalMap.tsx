@@ -17,6 +17,17 @@ interface BusinessLocation {
 
 const businessLocations: BusinessLocation[] = [
   {
+    id: "malaysia",
+    name: "Duria Manufacturing Sdn. Bhd.",
+    address:
+      "Lot 5933A, Jalan Perusahaan 1, Kamunting Industrial Area, 34600 Kamunting Perak.",
+    phone: "+6011-1091 4393",
+    email: "contact@duria.com.my",
+    x: 32,
+    y: 45,
+    region: "Malaysia",
+  },
+  {
     id: "singapore",
     name: "Duria Trading Pte Ltd",
     address:
@@ -61,7 +72,7 @@ const businessLocations: BusinessLocation[] = [
   },
   {
     id: "newzealand",
-    name: "DAILY FOODS CO. LTD",
+    name: "Daily Foods Co. Ltd",
     address: "8 Ron Driver Place, East Tamaki, Auckland, New Zealand 2013",
     phone: "0064-9-5793888",
     email: "",
@@ -91,26 +102,14 @@ export default function GlobalMap() {
 
   // Responsive coordinates based on screen size
   const getResponsiveCoordinates = (location: BusinessLocation) => {
-    if (isMobile) {
-      // Mobile coordinates (adjusted for 200% zoom level)
-      const mobileCoordinates: { [key: string]: { x: number; y: number } } = {
-        singapore: { x: 35, y: 48 },
-        china: { x: 45, y: 34 },
-        hongkong: { x: 48, y: 35 },
-        australia: { x: 60, y: 80 },
-        newzealand: { x: 70, y: 93 },
-      };
-      return mobileCoordinates[location.id] || { x: location.x, y: location.y };
-    }
-
-    // Desktop coordinates
+    // Use same coordinates for both mobile and desktop
     return { x: location.x, y: location.y };
   };
 
   return (
     <div className="relative w-full max-w-6xl mx-auto grid lg:grid-cols-2 gap-4">
       {/* Map Container */}
-      <div className="relative bg-white rounded-2xl p-2 md:p-2 shadow-xl overflow-hidden">
+      <div className="relative bg-white rounded-2xl p-2 md:p-2 shadow-xl">
         {/* World Map Background */}
         <div className="relative w-full h-[500px] md:h-[700px] rounded-xl">
           {/* World Map Image */}
@@ -118,7 +117,7 @@ export default function GlobalMap() {
             src="/world_map_2.png"
             alt="World Map"
             fill
-            className="object-contain md:object-contain object-scale-200 md:object-scale-100 opacity-100"
+            className="object-contain opacity-100"
             onError={(e) => {
               // Fallback to a simple world map if image fails to load
               e.currentTarget.style.display = "none";
@@ -136,7 +135,7 @@ export default function GlobalMap() {
               <div
                 key={location.id}
                 className={`absolute cursor-pointer group ${
-                  isHovered ? "z-50" : "z-10"
+                  isHovered ? "z-[9999]" : "z-10"
                 }`}
                 style={{
                   left: `${coords.x}%`,
@@ -171,7 +170,7 @@ export default function GlobalMap() {
 
                 {/* Hover tooltip */}
                 {hoveredLocation?.id === location.id && (
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 px-4 py-3 bg-white text-black text-sm rounded-xl shadow-2xl border border-gray-200 whitespace-normal z-[9999] min-w-[280px] max-w-[320px]">
+                  <div className="fixed bottom-full left-1/2 transform -translate-x-1/2 mb-4 px-4 py-3 bg-white text-black text-sm rounded-xl shadow-2xl border border-gray-200 whitespace-normal z-[999999] min-w-[280px] max-w-[320px]">
                     <div className="font-bold text-lg mb-2">
                       {location.name}
                     </div>
@@ -191,20 +190,6 @@ export default function GlobalMap() {
                           </p>
                         </div>
                       </div>
-
-                      {location.email && (
-                        <div className="flex items-center space-x-2">
-                          <Mail className="w-4 h-4 text-red-500 flex-shrink-0" />
-                          <div>
-                            <p className="font-medium text-gray-900 text-xs">
-                              Email
-                            </p>
-                            <p className="text-gray-600 text-xs">
-                              {location.email}
-                            </p>
-                          </div>
-                        </div>
-                      )}
                     </div>
 
                     {/* Arrow */}
@@ -273,8 +258,8 @@ export default function GlobalMap() {
       {!selectedLocation && (
         <div className="text-center h-full lg:flex lg:items-center lg:px-10 lg:text-center">
           <p className="text-gray-600 text-sm">
-            Hover over or click the location markers to view our business
-            locations worldwide
+            Hover over or click the location markers to view our distribution
+            partners' presence worldwide
           </p>
         </div>
       )}
