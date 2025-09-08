@@ -86,7 +86,7 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://shop.duria.com.my"
+            href="https://shop.duria.com.my/products"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto"

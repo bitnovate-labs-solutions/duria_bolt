@@ -55,7 +55,7 @@ export default function Header() {
                 </Link>
               ))}
               <a
-                href="https://shop.duria.com.my"
+                href="https://shop.duria.com.my/products"
                 target="_blank"
                 rel="noopener noreferrer"
               >
